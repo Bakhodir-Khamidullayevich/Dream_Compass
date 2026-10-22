@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" fill="none">
+  <g stroke="#80552f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" opacity=".72">
+    <path d="M85 295 C155 205 225 120 335 142 S500 235 590 180" stroke-dasharray="7 12"/>
+    <circle cx="85" cy="295" r="5" fill="#80552f" fill-opacity=".25"/>
+    <circle cx="590" cy="180" r="5" fill="#80552f" fill-opacity=".25"/>
+    <g transform="translate(315 140) rotate(-17)">
+      <path d="M-7 -47 L8 -11 L55 4 Q61 7 56 12 L9 8 L1 44 L-7 46 L-10 8 L-48 19 Q-54 20 -53 14 L-14 -6 Z" fill="#80552f" fill-opacity=".28" stroke="#80552f" stroke-width="1.9"/>
+    </g>
+    <g transform="translate(735 178)">
+      <circle r="106"/><circle r="88"/><circle r="64" stroke-dasharray="2 8"/>
+      <path d="M0 -120 V120 M-120 0 H120 M-84 -84 L84 84 M84 -84 L-84 84" opacity=".52"/>
+      <path d="M0 -78 L15 -15 L78 0 L15 15 L0 78 L-15 15 L-78 0 L-15 -15 Z" fill="#80552f" fill-opacity=".12"/>
+      <path d="M0 -78 L8 -8 L78 0 L8 8 L0 78 L-8 8 L-78 0 L-8 -8 Z"/>
+      <circle r="5" fill="#80552f" fill-opacity=".28"/>
+      <path d="M0 -135 V-122 M0 122 V135 M-135 0 H-122 M122 0 H135"/>
+    </g>
+    <path d="M420 265 C490 290 548 275 590 235" stroke-dasharray="5 10" opacity=".52"/>
+  </g>
+</svg>

@@ -1,0 +1,3272 @@
+@font-face{font-family:Mont;src:url('../fonts/basic/Montserrat-Regular.woff2')}@font-face{font-family:Mont;src:url('../fonts/basic/Montserrat-Medium.woff2');font-weight:500}@font-face{font-family:Mont;src:url('../fonts/basic/Montserrat-Bold.woff2');font-weight:700}@font-face{font-family:Cormorant;src:url('../fonts/Accent/CormorantGaramond-Medium.woff2');font-weight:500}@font-face{font-family:Cormorant;src:url('../fonts/Accent/CormorantGaramond-Bold.woff2');font-weight:700}:root{--ivory:#f8f5ef;--paper:#fffdf9;--navy:#14233e;--gold:#c9873d;--gold2:#e7ad59;--text:#263247;--muted:#747987;--line:rgba(27,42,64,.13);--shadow:0 18px 50px rgba(39,37,31,.10)}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--text);font-family:Mont,Arial,sans-serif;font-size:15px;line-height:1.6}body.menu-open{overflow:hidden}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1320px,calc(100% - 64px));margin-inline:auto}.section{padding:104px 0}.site-header{position:absolute;z-index:30;inset:0 0 auto;color:#fff}.header-inner{width:min(1420px,calc(100% - 64px));height:96px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:0 12px;transition:all .3s}.site-header.scrolled{position:fixed;background:rgba(249,246,240,.94);color:var(--navy);backdrop-filter:blur(16px);box-shadow:0 8px 28px #14233e12}.site-header.scrolled .header-inner{height:78px}.brand{display:flex;align-items:center;gap:11px;min-width:245px}.brand img{width:49px;height:49px;object-fit:contain}.brand span{display:flex;flex-direction:column;line-height:1.1;letter-spacing:.16em}.brand b{font-family:Cormorant,serif;font-size:22px;letter-spacing:.1em}.brand small{font-size:9px;letter-spacing:.28em;text-align:center;margin-top:6px}.nav{display:flex;justify-content:center;gap:40px;flex:1}.nav-link{font-size:14px;position:relative;padding:10px 0}.nav-link:after{content:"";position:absolute;bottom:2px;left:0;width:0;height:1px;background:var(--gold2);transition:width .25s}.nav-link:hover:after,.nav-link.active:after{width:100%}.header-actions{display:flex;align-items:center;gap:24px}.language{position:relative}.language-current{border:0;background:none;color:inherit;cursor:pointer;font-size:13px;padding:10px}.language-menu{display:none;position:absolute;right:0;top:100%;background:#fffdf9;color:var(--navy);border:1px solid var(--line);border-radius:12px;padding:7px;min-width:130px;box-shadow:var(--shadow)}.language.open .language-menu{display:grid}.language-menu button{border:0;background:none;text-align:left;padding:9px 12px;border-radius:7px;cursor:pointer}.language-menu button:hover{background:#f5ead9}.button{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:16px 28px;border:0;border-radius:999px;background:linear-gradient(110deg,#ffb13f,#bd792e);color:white;font-weight:500;box-shadow:0 10px 26px #b77a3330;transition:transform .25s,box-shadow .25s;cursor:pointer}.button span{font-size:20px;line-height:1}.button:hover{transform:translateY(-3px);box-shadow:0 14px 30px #b77a3340}.button-small{padding:12px 21px;font-size:13px;white-space:nowrap}.burger{display:none;background:none;border:0;color:inherit}.hero{position:relative;min-height:790px;height:min(900px,100svh);display:flex;align-items:center;overflow:hidden;color:#fff;background:#18364e}.hero-bg,.hero-shade{position:absolute;inset:0}.hero-bg{background-image:url('../img/hero-user.webp');background-size:cover;background-position:center 46%;transform:scale(1.025);animation:heroReveal 1.2s ease-out both}.hero-shade{background:linear-gradient(90deg,rgba(8,28,47,.72) 0%,rgba(8,28,47,.44) 43%,rgba(8,28,47,.06) 100%),linear-gradient(180deg,rgba(9,27,43,.25),transparent 45%,rgba(6,25,38,.34))}.hero-content{position:relative;z-index:2;padding-top:90px}.eyebrow{font-size:11px;letter-spacing:.28em;color:var(--gold);font-weight:500;margin:0 0 18px}.hero-eyebrow{color:#f6d4a5}.hero h1,.section-heading h2,.request-panel h2{font-family:Cormorant,Georgia,serif;font-size:clamp(56px,6.2vw,92px);font-weight:500;line-height:.94;letter-spacing:-.025em;margin:0;max-width:780px}.hero h1 em,.section-heading h2 em,.request-panel h2 em{font-style:normal;color:#f3c37e}.hero-copy{font-size:18px;max-width:610px;line-height:1.65;margin:25px 0 32px;color:#f8f8f6}.hero-categories{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;max-width:940px}.hero-categories a{display:flex;align-items:center;gap:10px;padding:10px 13px;border-bottom:1px solid #ffffff65;background:#ffffff08;backdrop-filter:blur(4px);transition:background .25s,border-color .25s}.hero-categories a:hover{background:#ffffff20;border-color:#f4c078}.hero-categories .line-icon{font-size:20px;color:#f4c078}.hero-categories a span:nth-child(2){font-size:13px}.hero-categories i{font-style:normal;opacity:0;transform:translate(-4px,4px);transition:.2s}.hero-categories a:hover i{opacity:1;transform:none}.hero-button{min-width:220px}.scroll-cue{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);z-index:2;display:flex;align-items:center;flex-direction:column;gap:5px;font-size:11px;color:#fff9}.scroll-cue b{font-size:18px;font-weight:400}.mouse{height:25px;width:14px;border:1px solid #fff9;border-radius:10px;display:flex;justify-content:center;padding-top:5px}.mouse i{width:2px;height:5px;background:#fff;border-radius:2px;animation:scrollDot 1.5s infinite}.section-heading{margin-bottom:42px}.section-heading h2,.request-panel h2{font-size:clamp(42px,4.3vw,64px);line-height:.98;color:var(--navy)}.section-heading h2 em,.request-panel h2 em{color:var(--gold)}.section-lead{color:var(--muted);max-width:650px;font-size:16px;line-height:1.65;margin:17px 0 0}.destination-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}.heading-note{display:flex;align-items:center;gap:20px;color:#7c7880;font-family:Cormorant,serif;font-size:20px;font-style:italic;line-height:1.2;padding:0 18px 16px}.compass-mark{font-size:48px;color:var(--gold);font-style:normal}.destination-grid{display:grid;grid-template-columns:1.02fr 1fr;grid-template-rows:300px 300px;gap:12px}.destination-card{position:relative;display:block;overflow:hidden;border-radius:17px;color:#fff;isolation:isolate;background:#314b5c}.destination-card>img,.format-card>img,.benefit-photo>img,.request-visual>img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}.destination-card:hover>img,.format-card:hover>img{transform:scale(1.045)}.destination-card .image-shade,.format-card .image-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,37,.04) 10%,rgba(9,23,36,.15) 35%,rgba(6,22,32,.78) 100%);transition:background .3s}.destination-card:hover .image-shade,.format-card:hover .image-shade{background:linear-gradient(180deg,rgba(10,24,37,.08),rgba(6,22,32,.72))}.destination-turkey{grid-row:span 2}.destination-card .card-overline{position:absolute;top:28px;left:30px;font-size:10px;letter-spacing:.27em}.destination-info{position:absolute;left:30px;right:24px;bottom:28px;display:flex;align-items:flex-start;flex-direction:column;gap:7px}.destination-info strong{font-family:Cormorant,serif;font-size:clamp(30px,3.1vw,48px);font-weight:500;line-height:1.05}.destination-info>span{max-width:360px;font-size:13px;line-height:1.6;color:#fffE}.destination-turkey .destination-info strong{font-size:clamp(46px,5vw,68px)}.outline-link{display:flex;align-items:center;gap:20px;border:1px solid #ffffffb5;border-radius:30px;padding:9px 14px;font-size:12px;font-weight:400;margin-top:12px}.outline-link i{font-style:normal;font-size:20px}.round-arrow{display:grid;place-items:center;border:1px solid #ffffffb5;border-radius:50%;width:43px;height:43px;font-size:20px;font-weight:400;margin-top:7px;transition:background .2s,color .2s}.destination-card:hover .round-arrow{background:#fff;color:var(--navy)}.slide-dots{position:absolute;left:30px;bottom:15px;display:flex;gap:9px}.slide-dots i{width:8px;height:8px;background:#ffffff75;border-radius:50%}.slide-dots i:first-child{width:18px;border-radius:8px;background:#f2aa43}.destination-uae .destination-info{bottom:22px}.destination-uae .destination-info strong{font-size:42px}.destination-uae .destination-info>span{max-width:290px}.button-center{display:flex;width:max-content;margin:30px auto 0}.button-outline-gold{background:transparent;border:1px solid #d7a15b;color:var(--navy);box-shadow:none}.button-outline-gold:hover{background:#fff8ec}.formats{background:linear-gradient(180deg,#faf7f1,#f5efe5);overflow:hidden}.centered{text-align:center}.centered .section-lead{margin-inline:auto}.format-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1120px;margin:0 auto}.format-card{height:250px;position:relative;display:block;overflow:hidden;border-radius:18px;color:white;background:#2b4350;box-shadow:0 12px 32px #1e29330d}.format-card .image-shade{background:linear-gradient(90deg,rgba(7,25,37,.60),rgba(7,25,37,.08) 100%),linear-gradient(0deg,rgba(7,25,37,.45),transparent 75%)}.format-icon{position:absolute;left:25px;bottom:28px;border:1px solid #ffffffba;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:24px}.format-copy{position:absolute;left:88px;right:70px;bottom:28px;display:flex;flex-direction:column;gap:5px}.format-copy strong{font-family:Cormorant,serif;font-size:clamp(23px,2.3vw,31px);font-weight:500;line-height:1.05}.format-copy small{font-size:12px;color:#ffffffdf}.format-arrow{position:absolute;right:24px;bottom:30px;border:1px solid #ffffffba;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;font-size:19px;transition:background .2s,color .2s,transform .2s}.format-card:hover .format-arrow{background:#fff;color:var(--navy);transform:translateX(3px)}.format-cta{text-align:center;margin-top:30px}.benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.benefit-card{border:1px solid #e9e1d5;border-radius:15px;overflow:hidden;background:#fffdf9;box-shadow:0 12px 28px #14233e06;transition:transform .25s,box-shadow .25s}.benefit-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.benefit-photo{height:160px;position:relative;overflow:visible}.benefit-photo>img{object-fit:cover}.benefit-icon{position:absolute;left:22px;bottom:-22px;width:48px;height:48px;display:grid;place-items:center;background:#fff4e2;color:var(--gold);border:5px solid #fffdf9;border-radius:50%;font-size:21px}.benefit-copy{padding:30px 22px 25px}.benefit-copy h3{font-family:Cormorant,serif;font-size:24px;line-height:1.12;color:#171f2e;margin:0 0 12px;font-weight:700}.benefit-copy p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}.request-section{background:#f7f2e9;padding-top:90px;padding-bottom:90px}.request-wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:stretch;border-radius:24px;overflow:hidden;background:#fffdf9;box-shadow:0 25px 70px #16253a12}.request-panel{padding:45px 40px}.request-panel h2{font-size:clamp(37px,3.4vw,51px)}.request-panel .section-lead{font-size:14px;margin-bottom:25px}.request-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 14px}.field{display:flex;flex-direction:column;gap:7px;min-width:0}.field>span,.choice-field legend{font-size:12px;font-weight:500;color:var(--navy)}.field small{color:#96969b;font-weight:400}.field input,.field select,.field textarea{width:100%;border:1px solid #dedbd5;border-radius:10px;background:#fff;color:var(--text);padding:12px 13px;outline:none;min-height:46px;font-size:12px;transition:border-color .2s,box-shadow .2s}.field textarea{resize:vertical;min-height:75px}.field input:focus,.field select:focus,.field textarea:focus{border-color:#d59a4a;box-shadow:0 0 0 3px #d59a4a20}.field-full,.choice-field,.submit-button,.form-status{grid-column:1/-1}.choice-field{padding:0;border:0;margin:0;min-width:0}.choice-field legend{margin-bottom:8px}.choice-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.choice-row label{cursor:pointer;min-width:0}.choice-row input{position:absolute;opacity:0;pointer-events:none}.choice-row span{display:flex;align-items:center;justify-content:center;min-height:43px;border:1px solid #e3dfd8;border-radius:9px;font-size:12px;color:#6c7180;transition:.2s}.choice-row input:checked+span{border-color:#d99a42;background:#fff3df;color:#8f5b20}.budget-row{grid-template-columns:repeat(4,minmax(0,1fr))}.budget-row span{font-size:11px}.submit-button{width:100%;margin-top:2px}.form-status{font-size:12px;color:var(--muted);margin:0}.request-visual{position:relative;min-height:780px;overflow:hidden;background:#8fa6af}.request-visual>img{position:absolute;inset:0}.visual-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,33,48,.02),rgba(13,33,48,.06) 45%,rgba(13,33,48,.30))}.visual-note{position:absolute;left:30px;right:30px;bottom:28px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:3px 20px;background:rgba(255,253,249,.95);backdrop-filter:blur(12px);padding:22px 24px;border-radius:15px;color:var(--navy);box-shadow:var(--shadow)}.quote-mark{font-family:Cormorant,serif;color:var(--gold);font-size:44px;line-height:.7;grid-column:1}.visual-note p{font-family:Cormorant,serif;font-size:25px;line-height:1.1;margin:0;grid-column:1}.visual-note small{color:var(--gold);letter-spacing:.22em;font-size:9px;grid-column:1}.note-compass{grid-column:2;grid-row:1/4;color:var(--gold);font-size:39px}.footer{background:#14233e;color:#fff;padding:52px 0 20px}.footer-main{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr;gap:35px;padding-bottom:38px}.footer-brand{min-width:0;align-self:start}.footer-brand b{font-size:20px}.footer-tagline{color:#d6d7db;font-family:Cormorant,serif;font-size:22px;margin:0}.footer-links,.footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:10px;font-size:12px;color:#d6d7df}.footer-links a:hover,.footer-contact a:hover{color:#f3bd72}.footer-contact strong{font-size:13px;color:#fff;margin-bottom:3px}.footer-bottom{border-top:1px solid #ffffff20;padding-top:18px;display:flex;align-items:center;justify-content:space-between;color:#bfc5d0;font-size:10px}.footer-bottom a{color:#f3bd72}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}@keyframes heroReveal{from{opacity:.5;transform:scale(1.07)}to{opacity:1;transform:scale(1.025)}}@keyframes scrollDot{0%,100%{transform:translateY(0);opacity:1}70%{transform:translateY(6px);opacity:.2}}@media(max-width:1100px){.wrap{width:min(100% - 44px,1000px)}.header-inner{width:calc(100% - 40px);gap:18px}.brand{min-width:210px}.nav{gap:25px}.header-actions{gap:12px}.destination-grid{grid-template-rows:270px 270px}.benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.benefit-photo{height:190px}.request-panel{padding:38px 28px}.request-visual{min-height:800px}.footer-main{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.section{padding:72px 0}.wrap{width:calc(100% - 36px)}.header-inner{width:calc(100% - 30px);height:78px;padding:0 2px}.brand{min-width:0;gap:7px}.brand img{width:38px;height:38px}.brand b{font-size:17px}.brand small{font-size:7px}.burger{display:flex;flex-direction:column;gap:5px;padding:10px;order:3}.burger span{display:block;width:22px;height:1px;background:currentColor;transition:.2s}.burger[aria-expanded=true] span:first-child{transform:translateY(3px) rotate(45deg)}.burger[aria-expanded=true] span:last-child{transform:translateY(-3px) rotate(-45deg)}.nav{display:none;position:fixed;inset:78px 0 auto;background:rgba(249,246,240,.98);color:var(--navy);padding:24px 28px 30px;box-shadow:0 20px 35px #14233e1c;flex-direction:column;gap:12px;align-items:flex-start}.nav.open{display:flex}.nav-link{font-size:17px}.header-actions{margin-left:auto;gap:6px}.language-current{padding:8px;font-size:11px}.button-small{padding:10px 13px;font-size:11px;gap:8px}.hero{min-height:760px;height:94svh;max-height:900px;align-items:flex-end;padding-bottom:95px}.hero-bg{background-position:57% center}.hero-shade{background:linear-gradient(90deg,rgba(8,28,47,.73),rgba(8,28,47,.25)),linear-gradient(0deg,rgba(6,25,38,.45),transparent 80%)}.hero-content{padding-top:110px}.hero h1{font-size:clamp(54px,12vw,76px)}.hero-copy{font-size:15px;max-width:520px;margin:20px 0 25px}.hero-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:24px}.hero-categories a{padding:9px 10px;gap:8px}.hero-categories a span:nth-child(2){font-size:11px}.hero-categories .line-icon{font-size:17px}.hero-button{padding:14px 22px}.scroll-cue{display:none}.destination-heading{align-items:flex-start}.heading-note{display:none}.section-heading h2{font-size:clamp(42px,9vw,56px)}.section-lead{font-size:14px}.destination-grid{grid-template-columns:1fr 1fr;grid-template-rows:300px 205px 205px;gap:9px}.destination-turkey{grid-column:1/-1;grid-row:auto}.destination-turkey .destination-info strong{font-size:50px}.destination-card .card-overline{top:18px;left:18px}.destination-info{left:18px;right:14px;bottom:17px;gap:5px}.destination-info strong{font-size:32px}.destination-info>span{font-size:11px}.destination-turkey .destination-info>span{max-width:310px}.outline-link{margin-top:5px;padding:6px 10px;font-size:10px}.destination-uae .destination-info strong{font-size:34px}.destination-uae .destination-info>span{max-width:250px}.round-arrow{width:34px;height:34px;font-size:17px}.slide-dots{left:18px;bottom:10px}.button-center{font-size:12px;padding:13px 19px}.format-grid{grid-template-columns:1fr;gap:12px}.format-card{height:220px}.format-copy{left:82px;right:58px;bottom:24px}.format-copy strong{font-size:28px}.format-icon{left:20px;bottom:24px;width:45px;height:45px}.format-arrow{right:18px;bottom:27px;width:34px;height:34px}.benefit-grid{gap:12px}.benefit-photo{height:135px}.benefit-copy{padding:28px 15px 18px}.benefit-copy h3{font-size:21px}.benefit-copy p{font-size:12px}.request-section{padding:55px 0}.request-wrap{grid-template-columns:1fr}.request-panel{padding:30px 22px}.request-panel h2{font-size:clamp(37px,8vw,48px)}.request-visual{min-height:360px;grid-row:1}.visual-note{left:18px;right:18px;bottom:18px;padding:17px 18px}.visual-note p{font-size:22px}.request-form{gap:14px 10px}.field input,.field select,.field textarea{font-size:12px;padding:11px}.choice-row{gap:5px}.choice-row span{font-size:11px}.budget-row span{font-size:9px}.footer{padding-top:38px}.footer-main{gap:25px 20px}.footer-tagline{font-size:19px}.footer-bottom{gap:12px;flex-wrap:wrap}}@media(max-width:430px){.header-actions{gap:0}.brand b{font-size:15px;letter-spacing:.07em}.brand small{letter-spacing:.18em}.brand img{width:32px;height:32px}.button-small{padding:9px 10px;font-size:10px}.language-current{font-size:10px}.hero{min-height:730px}.hero-categories{grid-template-columns:1fr 1fr}.hero-categories a:nth-child(5){grid-column:1/-1;width:max-content}.destination-grid{grid-template-rows:280px 190px 190px}.destination-info strong{font-size:28px}.destination-turkey .destination-info strong{font-size:45px}.destination-info>span{font-size:10px}.destination-uae .destination-info strong{font-size:30px}.destination-card .card-overline{font-size:8px}.benefit-grid{grid-template-columns:1fr 1fr}.benefit-photo{height:112px}.benefit-copy h3{font-size:19px}.benefit-copy p{font-size:11px}.request-panel{padding:28px 16px}.request-panel h2{font-size:37px}.field>span,.choice-field legend{font-size:11px}.field input,.field select{min-height:43px}.choice-row span{min-height:39px}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-bottom{font-size:9px}.footer-bottom span:nth-child(2){display:none}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* Dream Compass refinement pass */
+@font-face{font-family:Mont;src:url('../fonts/basic/Montserrat-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:Mont;src:url('../fonts/basic/Montserrat-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:Cormorant;src:url('../fonts/Accent/CormorantGaramond-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:Cormorant;src:url('../fonts/Accent/CormorantGaramond-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+body{font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.nav-link,.button,.field>span,.choice-field legend,.benefit-copy h3{font-weight:500}
+.site-header.scrolled{background:rgba(18,34,54,.66);color:#fff;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 8px 28px rgba(4,17,31,.12)}
+.site-header.scrolled .header-inner{height:82px}
+.language-current{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:55px;border:1px solid rgba(255,255,255,.34);border-radius:999px;padding:9px 12px;font-weight:500;letter-spacing:.04em}
+.site-header.scrolled .language-current{border-color:rgba(255,255,255,.34)}
+.chevron{width:10px;height:7px;display:block;transition:transform .22s ease;flex:none}.language.open .chevron{transform:rotate(180deg)}
+.destination-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:300px 300px;grid-template-areas:'turkey uae' 'turkey lower';gap:12px;min-width:0}
+.destination-turkey{grid-area:turkey;grid-row:auto;min-height:0}.destination-uae{grid-area:uae;min-height:0}.destination-thailand{grid-area:lower;min-height:0}.destination-maldives{grid-area:lower;min-height:0;margin-left:calc(50% + 6px);width:calc(50% - 6px)}
+.destination-uae{height:auto}.destination-thailand{width:calc(50% - 6px);height:100%}.destination-maldives{height:100%}
+.destination-card{min-width:0;min-height:0}.destination-card>img{object-fit:cover;object-position:center}.destination-info{z-index:2}.destination-info strong{font-weight:500;text-shadow:0 2px 15px rgba(0,0,0,.16)}.destination-info>span{font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,.35)}.destination-card .card-overline{z-index:2;font-weight:500}
+.destination-card .image-shade{z-index:1;background:linear-gradient(180deg,rgba(7,23,37,.02) 0%,rgba(7,23,37,.05) 35%,rgba(4,20,31,.76) 100%)}
+.format-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1120px;margin-inline:auto}.format-card{height:300px;min-width:0}.format-card>img{object-fit:cover}.format-copy strong{font-weight:500}.format-card .image-shade{background:linear-gradient(180deg,rgba(10,24,37,.02) 10%,rgba(9,23,36,.10) 36%,rgba(6,22,32,.78) 100%)}
+.benefit-grid{max-width:1180px;margin-inline:auto}.benefit-copy h3{font-weight:500;line-height:1.2}.benefit-copy p{font-weight:400;line-height:1.7}
+.request-visual{min-height:760px}.request-visual>img{object-fit:cover;object-position:center}
+.footer-tagline{display:none!important}.footer-main{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
+/* Smooth, consistent motion: avoid hiding entire sections until the observer fires. */
+.reveal{opacity:1;transform:none;transition:none}.reveal.visible{opacity:1;transform:none}
+.site-modal{width:min(680px,calc(100% - 28px));max-width:680px;max-height:min(90vh,900px);padding:clamp(24px,4vw,42px);border:1px solid rgba(20,35,62,.12);border-radius:22px;background:var(--paper);color:var(--text);box-shadow:0 30px 100px rgba(5,20,36,.28);overflow:auto}
+.site-modal::backdrop{background:rgba(8,20,34,.58);backdrop-filter:blur(5px)}.modal-close{position:sticky;float:right;top:0;margin:-10px -10px 0 12px;border:1px solid var(--line);border-radius:50%;width:38px;height:38px;background:#fff;color:var(--navy);font-size:25px;line-height:1;cursor:pointer;z-index:2}.detail-modal-content h2,.modal-request-heading h2{font:500 clamp(38px,6vw,56px)/.98 Cormorant,Georgia,serif;color:var(--navy);margin:0 0 16px}.detail-modal-content>p:not(.eyebrow),.modal-request-heading>p:not(.eyebrow){color:var(--muted);line-height:1.7}.detail-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:25px}.text-button{border:0;background:none;color:var(--navy);text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:10px}.request-modal{width:min(760px,calc(100% - 24px));max-height:92vh}.request-modal .request-form{grid-template-columns:repeat(2,minmax(0,1fr))}.request-modal .request-form .field,.request-modal .request-form .choice-field{min-width:0}.request-modal .request-form .submit-button{grid-column:1/-1}.request-modal .form-status{grid-column:1/-1}.request-modal .request-form .field-full{grid-column:1/-1}.request-modal .request-form .choice-row span{font-size:12px}
+@media(max-width:760px){.destination-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:280px 190px;grid-template-areas:'turkey turkey' 'uae uae';gap:10px}.destination-turkey{grid-area:turkey}.destination-uae{grid-area:uae}.destination-thailand{grid-area:auto;width:auto;height:auto;margin:0}.destination-maldives{grid-area:auto;width:auto;height:auto;margin:0}.destination-grid{grid-auto-flow:row}.destination-thailand,.destination-maldives{display:block}.destination-grid{grid-template-rows:280px 190px 190px;grid-template-areas:'turkey turkey' 'uae uae' 'lower1 lower2'}.destination-thailand{grid-area:lower1}.destination-maldives{grid-area:lower2}.format-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.format-card{height:235px}.request-modal .request-form{grid-template-columns:1fr}.request-modal .request-form .field,.request-modal .request-form .field-full,.request-modal .request-form .choice-field,.request-modal .request-form .submit-button{grid-column:1}.footer-main{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.destination-grid{grid-template-rows:265px 175px 175px}.format-grid{grid-template-columns:1fr}.format-card{height:225px}.site-header.scrolled .header-inner{height:74px}.language-current{min-width:48px;padding:8px 9px;gap:7px}.detail-actions{align-items:stretch;flex-direction:column}.detail-actions .button{width:100%}}
+
+
+/* Dream Compass — refreshed first screen and navigation */
+:root{--gold:#d7a85f;--gold2:#f0ca8b}
+html{scroll-behavior:smooth;scroll-padding-top:0}
+.site-header{position:fixed;background:linear-gradient(180deg,rgba(7,28,47,.72) 0%,rgba(7,28,47,.42) 58%,rgba(7,28,47,0) 100%);color:#fff;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);transition:background .35s ease}
+.site-header.scrolled{background:linear-gradient(180deg,rgba(8,30,50,.88) 0%,rgba(8,30,50,.68) 72%,rgba(8,30,50,.2) 100%);color:#fff;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 28px rgba(4,17,31,.12)}
+.site-header .header-inner,.site-header.scrolled .header-inner{height:88px}
+.brand b{font-size:24px;letter-spacing:.09em}
+.nav{gap:clamp(15px,2vw,30px)}
+.nav-link{font-family:Cormorant,Georgia,serif;font-size:18px;font-weight:500;white-space:nowrap;letter-spacing:.01em}
+.nav-link:after{height:2px;bottom:1px;background:linear-gradient(90deg,#c48b45,#f5d59d)}
+.nav-link.active{color:#f2c77f}
+.header-actions{gap:14px}
+.language-current{display:flex;align-items:center;gap:8px;border:1px solid transparent;border-radius:999px;background:linear-gradient(rgba(12,36,57,.22),rgba(12,36,57,.22)) padding-box,linear-gradient(115deg,#b9803c,#f2d29a,#a86f34) border-box;padding:10px 13px;color:inherit}
+.language-current .chevron{width:11px;height:8px;transition:transform .22s ease}
+.language.open .language-current .chevron{transform:rotate(180deg)}
+.language-menu{top:calc(100% + 10px);z-index:50;border:1px solid transparent;background:linear-gradient(#fffdf9,#fffdf9) padding-box,linear-gradient(130deg,#b9803c,#f2d29a,#a86f34) border-box;box-shadow:0 14px 34px rgba(4,17,31,.2)}
+.button{gap:9px;background:linear-gradient(115deg,#bd8746 0%,#e6bd7c 52%,#c38c4a 100%);color:#13273b;box-shadow:0 8px 24px rgba(190,137,69,.18);font-family:Cormorant,Georgia,serif;font-size:18px;font-weight:600}
+.button-small{padding:12px 19px;font-size:17px;gap:8px}
+.button-arrow{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;margin-left:1px}
+.button-arrow svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.button:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(190,137,69,.28)}
+.hero{height:100vh;height:100svh;height:100dvh;min-height:0;max-height:none;align-items:center;padding:0;isolation:isolate}
+.hero-bg{background-image:url('../img/hero-user.webp');background-size:cover;background-position:center 54%;transform:none;animation:none;will-change:auto}
+.hero-shade{background:linear-gradient(90deg,rgba(5,24,42,.76) 0%,rgba(5,24,42,.53) 34%,rgba(5,24,42,.12) 72%,rgba(5,24,42,.04) 100%),linear-gradient(180deg,rgba(5,24,42,.16) 0%,transparent 42%,rgba(5,24,42,.12) 100%)}
+.hero-content{padding-top:80px;padding-bottom:72px}
+.hero-eyebrow{font-size:11px;letter-spacing:.3em;color:#f0d2a4;margin-bottom:20px}
+.hero h1{max-width:820px;font-size:clamp(58px,6.5vw,94px);line-height:.98;letter-spacing:-.035em;text-wrap:balance;text-shadow:0 3px 28px rgba(0,0,0,.12)}
+.hero h1 em{color:#e9bd7a}
+.hero-copy{max-width:570px;font-size:17px;line-height:1.7;color:rgba(255,255,255,.9);margin:24px 0 30px}
+.hero-categories{gap:8px;margin-bottom:27px;max-width:850px}
+.hero-categories a{background:rgba(255,255,255,.035);border-bottom-color:rgba(255,255,255,.45);padding:8px 11px;backdrop-filter:blur(7px);transition:background .28s ease,border-color .28s ease}
+.hero-categories a span:nth-child(2){font-size:12px}
+.hero-categories .line-icon{color:#edc27f}
+.hero-button{min-width:205px;padding:14px 24px}
+.scroll-cue{bottom:23px;gap:6px;font-size:11px;letter-spacing:.05em;color:rgba(255,255,255,.85);transition:opacity .25s ease}
+.scroll-cue .mouse{height:27px;width:15px;border-color:rgba(255,255,255,.8);padding-top:5px}
+.scroll-cue>svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;animation:cueArrow 1.8s ease-in-out infinite}
+@keyframes cueArrow{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(4px);opacity:1}}
+/* Do not animate large background layers or shift sections while scrolling. */
+.destination-card>img,.format-card>img{transition:transform .45s ease}
+@media(max-width:1200px){.brand{min-width:190px}.brand b{font-size:21px}.nav{gap:15px}.nav-link{font-size:16px}.header-inner{gap:15px}.header-actions{gap:8px}.button-small{padding:11px 14px}}
+@media(max-width:900px){.header-inner,.site-header.scrolled .header-inner{height:78px}.nav{gap:13px}.nav-link{font-family:Mont,Arial,sans-serif;font-size:12px}.brand{min-width:160px}.brand img{width:40px;height:40px}.brand b{font-size:18px}.brand small{font-size:8px}.header-actions{gap:6px}.button-small{font-size:14px;padding:10px 12px}.language-current{padding:8px 10px}}
+@media(max-width:760px){.site-header,.site-header.scrolled{background:linear-gradient(180deg,rgba(7,28,47,.82),rgba(7,28,47,.45) 70%,rgba(7,28,47,0));box-shadow:none}.site-header.scrolled{background:rgba(8,30,50,.82);backdrop-filter:blur(14px)}.header-inner,.site-header.scrolled .header-inner{height:72px}.nav{inset:72px 0 auto;background:rgba(8,30,50,.96);color:#fff;padding:22px 28px 28px;gap:13px;backdrop-filter:blur(16px)}.nav-link{font-family:Cormorant,Georgia,serif;font-size:21px}.brand{min-width:0}.brand b{font-size:16px}.brand small{font-size:7px}.brand img{width:34px;height:34px}.header-actions{margin-left:auto}.button-small{font-size:12px;padding:9px 11px;gap:6px}.button-arrow,.button-arrow svg{width:13px;height:13px}.language-current{font-size:11px;padding:7px 8px}.hero{height:100vh;height:100svh;height:100dvh;min-height:0;max-height:none;align-items:flex-end;padding:0 0 max(74px,env(safe-area-inset-bottom))}.hero-bg{background-position:62% center}.hero-shade{background:linear-gradient(90deg,rgba(5,24,42,.68),rgba(5,24,42,.25)),linear-gradient(0deg,rgba(5,24,42,.45),transparent 82%)}.hero-content{padding-top:110px;padding-bottom:20px}.hero-eyebrow{font-size:9px;letter-spacing:.22em;margin-bottom:15px}.hero h1{font-size:clamp(43px,10.5vw,70px);line-height:.98;max-width:650px}.hero-copy{font-size:14px;line-height:1.55;margin:17px 0 20px;max-width:440px}.hero-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:19px}.hero-categories a{padding:7px 8px;gap:7px}.hero-categories a span:nth-child(2){font-size:10px}.hero-categories .line-icon{font-size:15px}.hero-button{padding:12px 19px;min-width:175px}.scroll-cue{bottom:13px;font-size:9px;gap:3px}.scroll-cue .mouse{height:21px;width:12px}.scroll-cue>svg{width:10px;height:10px}}
+@media(max-width:430px){.brand b{font-size:14px}.brand small{font-size:6px}.brand img{width:30px;height:30px}.button-small{font-size:10px;padding:8px 9px}.language-current{gap:5px;padding:7px}.hero-content{padding-top:90px}.hero h1{font-size:clamp(39px,10.5vw,54px)}.hero-copy{font-size:13px}.hero-categories a span:nth-child(2){font-size:9px}.hero-categories a{padding:6px 7px}.hero-button{font-size:16px}.scroll-cue{bottom:10px}}
+@media(max-height:720px) and (min-width:761px){.hero-content{padding-top:75px;padding-bottom:48px}.hero h1{font-size:clamp(52px,5.4vw,74px)}.hero-copy{margin:16px 0 20px}.hero-categories{margin-bottom:18px}.site-header .header-inner,.site-header.scrolled .header-inner{height:74px}}
+@media(prefers-reduced-motion:reduce){.scroll-cue>svg{animation:none}.button,.destination-card>img,.format-card>img{transition:none}}
+
+
+/* Restored original international-tours hero; About banner remains page-specific. */
+.hero h1 .hero-title-line { display: block; white-space: nowrap; }
+.hero h1 .hero-brand-line { width: max-content; max-width: 100%; }
+
+/* Buttons use a solid, warm gold fill — no gradient. */
+.button {
+  background: #d9aa68 !important;
+  background-image: none !important;
+  background-size: auto !important;
+  background-position: center !important;
+  color: #172a3c !important;
+  box-shadow: 0 7px 20px rgba(15, 25, 36, .16);
+  transition: background-color .22s ease, transform .22s ease, box-shadow .22s ease;
+  gap: 9px;
+}
+.button:hover {
+  background: #e5bc80 !important;
+  background-image: none !important;
+  box-shadow: 0 10px 24px rgba(15, 25, 36, .20);
+}
+.button-outline-gold {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+.button-outline-gold:hover {
+  background: rgba(217, 170, 104, .10) !important;
+  background-image: none !important;
+}
+
+/* The header stays clear; the photo remains visible behind it even after scrolling. */
+.site-header,
+.site-header.scrolled {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+.site-header .header-inner,
+.site-header.scrolled .header-inner { background: transparent !important; }
+.language-current {
+  background: rgba(26, 34, 39, .28) !important;
+  background-image: none !important;
+  border: 1px solid rgba(255, 255, 255, .42) !important;
+}
+.language-menu {
+  background: rgba(27, 34, 38, .96) !important;
+  background-image: none !important;
+  border: 1px solid rgba(255, 255, 255, .24) !important;
+  color: #f8f4ed;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.language-menu button { color: inherit; }
+.language-menu button:hover { background: rgba(231, 189, 122, .16); color: #f2c982; }
+
+@media (min-width: 761px) {
+  .hero-bg {
+    background-position: center center !important;
+  }
+}
+@media (max-width: 760px) {
+  .hero-bg {
+    background-image: url('../img/hero-user.webp') !important;
+    background-size: cover !important;
+    background-position: 58% center !important;
+  }
+  .site-header .nav { background: rgba(27, 34, 38, .94); }
+  .hero h1 { font-size: clamp(36px, 9.5vw, 66px); }
+  .hero h1 .hero-brand-line { font-size: .9em; letter-spacing: -.045em; }
+}
+@media (max-width: 380px) {
+  .hero h1 { font-size: clamp(32px, 8.8vw, 42px); }
+  .hero h1 .hero-brand-line { font-size: .84em; }
+}
+
+
+/* Dream Compass — unified readable header, modal typography, and precise arrow motion. */
+.site-header,
+.site-header.scrolled {
+  background: linear-gradient(180deg, rgba(38, 41, 44, .92) 0%, rgba(38, 41, 44, .68) 56%, rgba(38, 41, 44, 0) 100%) !important;
+  background-image: linear-gradient(180deg, rgba(38, 41, 44, .92) 0%, rgba(38, 41, 44, .68) 56%, rgba(38, 41, 44, 0) 100%) !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: background .28s ease;
+}
+.site-header .header-inner,
+.site-header.scrolled .header-inner {
+  background: transparent !important;
+}
+.site-header .nav-link { color: rgba(255, 255, 255, .96) !important; }
+.site-header .nav-link.active { color: #f2c77f !important; }
+.site-header .nav-link:after { background: #e2b773 !important; }
+
+/* Only the arrow moves on hover; button label remains steady. */
+.button > span:last-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  transition: transform .28s cubic-bezier(.2,.7,.2,1);
+}
+.button:hover > span:last-child,
+.button:focus-visible > span:last-child {
+  transform: translateX(4px);
+}
+.button > .button-arrow svg { display: block; }
+
+/* Improve contrast in the travel-request modal without making the typography heavy. */
+.request-modal .modal-request-heading > p:not(.eyebrow) {
+  color: #596371;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+.request-modal .request-form .field > span,
+.request-modal .request-form .choice-field legend {
+  color: #344052;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.request-modal .request-form .choice-row span {
+  color: #344052;
+  font-size: 13px !important;
+  font-weight: 500;
+}
+.request-modal .request-form input:not([type="radio"]),
+.request-modal .request-form select,
+.request-modal .request-form textarea {
+  color: #263247;
+  font-size: 14px;
+  font-weight: 500;
+}
+.request-modal .request-form input::placeholder,
+.request-modal .request-form textarea::placeholder {
+  color: #717986;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 1;
+}
+.request-modal .form-status {
+  color: #344052;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+  .nav { gap: 10px; }
+  .nav-link { font-size: 14px; }
+  .brand { min-width: 175px; }
+  .header-inner { gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button > span:last-child { transition: none; }
+  .button:hover > span:last-child,
+  .button:focus-visible > span:last-child { transform: none; }
+}
+
+
+/* Dream Compass — second section refinements inspired by the approved sketch */
+.destinations.section{position:relative;isolation:isolate;overflow:hidden;background:#f7f2e9;padding-top:88px;padding-bottom:96px}
+.destinations.section:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 10% 12%,rgba(255,255,255,.58),transparent 43%),linear-gradient(135deg,#faf6ef 0%,#f5eee3 100%)}
+.travel-decor{position:absolute;z-index:-1;top:-22px;right:-28px;width:min(61%,900px);height:360px;background:url('../img/travel-decor.svg') center/contain no-repeat;opacity:.7;pointer-events:none}
+.destination-heading{position:relative;z-index:1;display:block;margin-bottom:34px;max-width:820px}
+.destination-heading .eyebrow{margin-bottom:18px;letter-spacing:.3em}
+.destination-heading h2{font-size:clamp(46px,5vw,72px);line-height:.9;letter-spacing:-.03em;max-width:820px}
+.destination-heading h2 em{color:#bd873d}
+.destination-heading .section-lead{max-width:590px;color:#66615d;font-size:15px;margin-top:19px}
+.destination-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:clamp(270px,27vw,360px) clamp(270px,27vw,360px);grid-template-areas:'turkey uae' 'thailand maldives';gap:16px;min-width:0}
+.destination-card{grid-area:auto!important;width:auto!important;height:auto!important;min-height:0;min-width:0;margin:0!important;aspect-ratio:auto;border-radius:15px;box-shadow:0 10px 26px rgba(67,49,31,.08);background:#d8cbb9}
+.destination-turkey{grid-area:turkey!important;grid-row:auto!important}
+.destination-uae{grid-area:uae!important;height:auto!important}
+.destination-thailand{grid-area:thailand!important;width:auto!important;height:auto!important}
+.destination-maldives{grid-area:maldives!important;width:auto!important;height:auto!important;margin:0!important}
+.destination-card>img{position:absolute;inset:0;object-position:center;width:100%;height:100%;object-fit:cover}
+.destination-turkey>img{object-position:center 54%}.destination-uae>img{object-position:center 52%}.destination-thailand>img{object-position:center 52%}.destination-maldives>img{object-position:center 52%}
+.destination-card .image-shade{background:linear-gradient(180deg,rgba(10,24,37,.02) 5%,rgba(9,23,36,.04) 36%,rgba(6,22,32,.72) 100%)}
+.destination-card:hover .image-shade{background:linear-gradient(180deg,rgba(10,24,37,.05),rgba(6,22,32,.76))}
+.destination-card .card-overline{top:26px;left:30px;font-size:10px;letter-spacing:.27em;font-weight:500}
+.destination-info{left:30px;right:24px;bottom:25px;gap:7px}
+.destination-info strong,.destination-turkey .destination-info strong,.destination-uae .destination-info strong{font-size:clamp(36px,3.4vw,54px);font-weight:500;line-height:1.02}
+.destination-info>span,.destination-uae .destination-info>span{max-width:390px;font-size:13px;line-height:1.55}
+.destination-info .round-arrow{margin-top:8px;width:44px;height:44px;flex:0 0 44px;font-size:23px;font-weight:400}
+.destination-card:hover .round-arrow{transform:translateX(3px);background:#fff;color:var(--navy)}
+.destination-info .round-arrow{transition:background .25s,color .25s,transform .25s}
+.destinations .button-center{display:none!important}
+@media(max-width:900px){.destinations.section{padding-top:76px}.travel-decor{width:62%;right:-75px;top:0;opacity:.45}.destination-grid{grid-template-rows:clamp(250px,34vw,310px) clamp(250px,34vw,310px);gap:12px}.destination-info{left:22px;right:18px;bottom:21px}.destination-card .card-overline{left:22px;top:21px}.destination-info strong,.destination-turkey .destination-info strong,.destination-uae .destination-info strong{font-size:clamp(34px,4.4vw,46px)}}
+@media(max-width:760px){.destinations.section{padding-top:66px;padding-bottom:72px}.travel-decor{top:0;right:-125px;width:100%;height:260px;opacity:.28}.destination-heading{margin-bottom:28px}.destination-heading h2{font-size:clamp(42px,9vw,58px)}.destination-heading .section-lead{font-size:14px;max-width:500px}.destination-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(4,260px);grid-template-areas:'turkey' 'uae' 'thailand' 'maldives';gap:12px}.destination-turkey,.destination-uae,.destination-thailand,.destination-maldives{grid-area:auto!important}.destination-info{left:22px;right:20px;bottom:20px}.destination-card .card-overline{left:22px;top:20px}.destination-info strong,.destination-turkey .destination-info strong,.destination-uae .destination-info strong{font-size:clamp(38px,8vw,48px)}.destination-info>span,.destination-uae .destination-info>span{font-size:12px;max-width:390px}.destination-info .round-arrow{width:40px;height:40px;flex-basis:40px}}
+@media(max-width:430px){.destination-grid{grid-template-rows:repeat(4,235px)}.destination-heading h2{font-size:42px}.destination-info strong,.destination-turkey .destination-info strong,.destination-uae .destination-info strong{font-size:37px}.destination-card .card-overline{font-size:9px}}
+
+/* Final refinements retained from the approved first-screen notes. */
+.site-header,
+.site-header.scrolled {
+  background: linear-gradient(180deg, rgba(38, 41, 44, .72) 0%, rgba(38, 41, 44, .42) 24%, rgba(38, 41, 44, .12) 43%, rgba(38, 41, 44, 0) 61%) !important;
+  background-image: linear-gradient(180deg, rgba(38, 41, 44, .72) 0%, rgba(38, 41, 44, .42) 24%, rgba(38, 41, 44, .12) 43%, rgba(38, 41, 44, 0) 61%) !important;
+  background-color: transparent !important;
+}
+.button {
+  background: #c88b42 !important;
+  background-image: none !important;
+}
+.button:hover,
+.button:focus-visible {
+  background: #b87a32 !important;
+  background-image: none !important;
+}
+@media (max-width: 760px) {
+  .site-header,
+  .site-header.scrolled {
+    background: linear-gradient(180deg, rgba(38, 41, 44, .62) 0%, rgba(38, 41, 44, .32) 30%, rgba(38, 41, 44, 0) 62%) !important;
+    background-image: linear-gradient(180deg, rgba(38, 41, 44, .62) 0%, rgba(38, 41, 44, .32) 30%, rgba(38, 41, 44, 0) 62%) !important;
+  }
+}
+
+
+/* Dream Compass — final soft header fade, seamless hero transition and distinct travel ornaments */
+.site-header,
+.site-header.scrolled {
+  position: fixed;
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  isolation: isolate;
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 205px;
+  background: linear-gradient(180deg,
+    rgba(35, 38, 41, .50) 0%,
+    rgba(35, 38, 41, .48) 6%,
+    rgba(35, 38, 41, .43) 13%,
+    rgba(35, 38, 41, .36) 21%,
+    rgba(35, 38, 41, .28) 30%,
+    rgba(35, 38, 41, .20) 40%,
+    rgba(35, 38, 41, .125) 51%,
+    rgba(35, 38, 41, .065) 61%,
+    rgba(35, 38, 41, .025) 71%,
+    rgba(35, 38, 41, 0) 82%,
+    rgba(35, 38, 41, 0) 100%);
+}
+.site-header .header-inner,
+.site-header.scrolled .header-inner {
+  position: relative;
+  z-index: 1;
+  height: 96px;
+  background: transparent !important;
+}
+.site-header .nav-link,
+.site-header .brand,
+.site-header .language-current,
+.site-header .button-small,
+.site-header .burger {
+  text-shadow: 0 1px 8px rgba(5, 17, 27, .32);
+}
+.site-header .nav-link.active { color: #f2c77f !important; }
+.site-header .nav-link:after { background: #e2b773 !important; }
+.site-header.scrolled .nav-link,
+.site-header.scrolled .language-current,
+.site-header.scrolled .brand,
+.site-header.scrolled .burger { color: #fff !important; }
+.site-header.scrolled .nav-link:after { background: #e7ad59 !important; }
+.site-header.scrolled .button-small { text-shadow: none; }
+
+/* Let the bottom of the hero photograph dissolve into the warm ivory section below. */
+.hero.home-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(165px, 17vw, 230px);
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(250, 246, 239, 0) 0%,
+    rgba(250, 246, 239, .018) 16%,
+    rgba(250, 246, 239, .055) 31%,
+    rgba(250, 246, 239, .11) 43%,
+    rgba(250, 246, 239, .20) 56%,
+    rgba(250, 246, 239, .36) 70%,
+    rgba(250, 246, 239, .58) 83%,
+    rgba(250, 246, 239, .82) 93%,
+    #faf6ef 100%);
+}
+.hero .scroll-cue { z-index: 2; }
+#destinations.destinations.section.wrap { background: #faf6ef; }
+#destinations.destinations.section::before {
+  background:
+    radial-gradient(ellipse at 10% 12%, rgba(255,255,255,.28), transparent 43%),
+    linear-gradient(135deg, #faf6ef 0%, #f5eee3 100%);
+}
+.travel-decor { opacity: .68; }
+
+/* Each following section receives a different travel illustration, not a repeated backdrop. */
+.formats::before { opacity: .23; }
+.formats::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: -42px;
+  bottom: 6px;
+  width: min(300px, 27vw);
+  height: 235px;
+  background: url('../img/decor-passport.svg') left bottom / contain no-repeat;
+  opacity: .075;
+  pointer-events: none;
+}
+.formats > .wrap { position: relative; z-index: 1; }
+.why.section.wrap {
+  background: transparent !important;
+  overflow: visible;
+}
+.why.section.wrap::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #fffdf9 0%, #f9f4ec 100%);
+}
+.why.section.wrap::before { opacity: .22; }
+.request-section::before { opacity: .22; }
+#routes.section.wrap::before { opacity: .21; }
+
+@media (max-width: 900px) {
+  .site-header::before { height: 190px; }
+  .formats::before { opacity: .17; }
+  .formats::after { width: 30vw; opacity: .055; }
+  .why.section.wrap::before { opacity: .16; }
+  .request-section::before { opacity: .16; }
+}
+@media (max-width: 760px) {
+  .site-header,
+  .site-header.scrolled { position: fixed; }
+  .site-header::before {
+    height: 185px;
+    background: linear-gradient(180deg,
+      rgba(35, 38, 41, .50) 0%,
+      rgba(35, 38, 41, .46) 8%,
+      rgba(35, 38, 41, .39) 18%,
+      rgba(35, 38, 41, .29) 30%,
+      rgba(35, 38, 41, .19) 42%,
+      rgba(35, 38, 41, .105) 54%,
+      rgba(35, 38, 41, .045) 66%,
+      rgba(35, 38, 41, .01) 78%,
+      rgba(35, 38, 41, 0) 88%,
+      rgba(35, 38, 41, 0) 100%);
+  }
+  .site-header .header-inner,
+  .site-header.scrolled .header-inner { height: 72px; }
+  .hero.home-hero::after { height: 155px; }
+  .formats::before { top: 0; right: -70px; width: 74vw; height: 255px; opacity: .12; }
+  .formats::after { left: -68px; bottom: 0; width: 38vw; height: 175px; opacity: .045; }
+  .why.section.wrap::before { top: 0; right: -55px; width: 72vw; height: 310px; opacity: .12; }
+  .why.section.wrap::after { background: linear-gradient(180deg, #fffdf9 0%, #f9f4ec 100%); }
+  .request-section::before { left: -100px; bottom: 0; width: 82vw; height: 260px; opacity: .12; }
+  #routes.section.wrap::before { width: 75vw; height: 260px; right: -45px; opacity: .11; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero.home-hero::after { transition: none; }
+}
+
+
+/* Improve readability of the sixth section's trip request form, matching the modal. */
+.request-panel .request-form .field > span,
+.request-panel .request-form .choice-field legend {
+  color: #344052;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.request-panel .request-form .field > span small {
+  font-size: 12px;
+  font-weight: 500;
+}
+.request-panel .request-form .choice-row span {
+  color: #344052;
+  font-size: 14px;
+  font-weight: 500;
+}
+.request-panel .request-form input:not([type="radio"]),
+.request-panel .request-form select,
+.request-panel .request-form textarea {
+  color: #263247;
+  font-size: 15px;
+  font-weight: 500;
+}
+.request-panel .request-form input::placeholder,
+.request-panel .request-form textarea::placeholder {
+  color: #717986;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+}
+@media (max-width: 760px) {
+  .request-panel .request-form .field > span,
+  .request-panel .request-form .choice-field legend { font-size: 14px; }
+  .request-panel .request-form .choice-row span { font-size: 13px; }
+}
+
+
+/* Section-heading travel illustrations: distinct, subtle motifs for blocks 2–6. */
+#destinations.destinations.section { position: relative; isolation: isolate; }
+#destinations .travel-decor { z-index: -1; }
+.formats.section, .why.section.wrap, .request-section { position: relative; isolation: isolate; }
+.formats.section::before,
+.why.section.wrap::before,
+.request-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 12px;
+  right: max(20px, calc((100vw - 1320px) / 2));
+  width: min(36vw, 470px);
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  opacity: .15;
+  pointer-events: none;
+}
+.formats.section::before { background-image: url('../img/decor-plane-route.svg'); }
+.why.section.wrap::before { background-image: url('../img/decor-compass-map.svg'); }
+.request-section::before { background-image: url('../img/decor-postcard.svg'); }
+.request-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 14px;
+  right: 3vw;
+  width: min(24vw, 300px);
+  height: 180px;
+  background: url('../img/decor-hot-air.svg') center / contain no-repeat;
+  opacity: .07;
+  pointer-events: none;
+}
+.formats > .wrap, .request-wrap { position: relative; z-index: 1; }
+.why.section.wrap > .section-heading, .why.section.wrap > .benefit-grid { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .formats.section::before, .why.section.wrap::before, .request-section::before { width: 42vw; height: 205px; opacity: .10; right: 10px; }
+  .request-section::after { width: 28vw; opacity: .045; }
+}
+@media (max-width: 760px) {
+  .formats.section::before, .why.section.wrap::before, .request-section::before { top: 4px; right: 0; width: 56vw; height: 170px; opacity: .07; }
+  .request-section::after { top: 0; right: 0; width: 35vw; height: 140px; opacity: .035; }
+}
+
+
+/* Seamless transition: dissolve the hero image into the warm ivory section below. */
+.hero:not(.home-hero)::after,
+.hero.home-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: clamp(190px, 23vw, 320px);
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    rgba(250, 246, 239, 0) 0%,
+    rgba(250, 246, 239, .012) 12%,
+    rgba(250, 246, 239, .035) 25%,
+    rgba(250, 246, 239, .075) 38%,
+    rgba(250, 246, 239, .14) 50%,
+    rgba(250, 246, 239, .24) 62%,
+    rgba(250, 246, 239, .39) 73%,
+    rgba(250, 246, 239, .58) 83%,
+    rgba(250, 246, 239, .79) 92%,
+    #faf6ef 100%);
+}
+#destinations.destinations.section {
+  background-color: #faf6ef !important;
+}
+#destinations.destinations.section::before {
+  background: linear-gradient(180deg, #faf6ef 0%, #f8f2e9 100%) !important;
+}
+@media (max-width: 760px) {
+  .hero:not(.home-hero)::after, .hero.home-hero::after { height: 185px; }
+}
+
+
+/* Fade should sit mostly below the hero, not wash out the bottom of the first screen. */
+.hero.home-hero { overflow: visible; isolation: isolate; z-index: 2; }
+.hero.home-hero .hero-bg,
+.hero.home-hero .hero-shade { overflow: hidden; }
+.hero:not(.home-hero)::after,
+.hero.home-hero::after {
+  bottom: -155px;
+  height: clamp(245px, 27vw, 355px);
+  z-index: 3;
+  background: linear-gradient(to bottom,
+    rgba(250, 246, 239, 0) 0%,
+    rgba(250, 246, 239, 0) 42%,
+    rgba(250, 246, 239, .018) 50%,
+    rgba(250, 246, 239, .055) 59%,
+    rgba(250, 246, 239, .13) 68%,
+    rgba(250, 246, 239, .28) 78%,
+    rgba(250, 246, 239, .52) 88%,
+    rgba(250, 246, 239, .78) 95%,
+    #faf6ef 100%);
+}
+#destinations.destinations.section { position: relative; z-index: 1; }
+@media (max-width: 760px) {
+  .hero:not(.home-hero)::after,
+  .hero.home-hero::after { bottom: -95px; height: 225px; }
+}
+
+
+/* Precision correction: only the first hero fades into section two. */
+.hero:not(.home-hero)::after { content: none !important; display: none !important; }
+.hero.home-hero::after {
+  bottom: -190px !important;
+  height: clamp(260px, 29vw, 380px) !important;
+  background: linear-gradient(to bottom,
+    rgba(250,246,239,0) 0%,
+    rgba(250,246,239,0) 48%,
+    rgba(250,246,239,.012) 56%,
+    rgba(250,246,239,.035) 64%,
+    rgba(250,246,239,.09) 72%,
+    rgba(250,246,239,.20) 80%,
+    rgba(250,246,239,.42) 88%,
+    rgba(250,246,239,.72) 95%,
+    #faf6ef 100%) !important;
+}
+/* Tighten vertical rhythm between sections without changing card layouts. */
+#destinations.destinations.section { padding-top: 58px !important; padding-bottom: 58px !important; }
+.formats.section, .why.section.wrap, #routes.section.wrap, .request-section {
+  padding-top: clamp(42px, 4.2vw, 62px) !important;
+  padding-bottom: clamp(42px, 4.2vw, 62px) !important;
+}
+/* Keep travel illustrations attached to each section title area. */
+.formats.section::before, .why.section.wrap::before, .request-section::before {
+  top: 0;
+  height: 225px;
+}
+@media (max-width: 760px) {
+  .hero.home-hero::after { bottom: -130px !important; height: 250px !important; }
+  #destinations.destinations.section { padding-top: 42px !important; padding-bottom: 42px !important; }
+  .formats.section, .why.section.wrap, #routes.section.wrap, .request-section {
+    padding-top: 36px !important; padding-bottom: 36px !important;
+  }
+}
+
+
+/* Final visible travel ornaments: keep every illustration above its section background,
+   but below the section content. The destinations heading uses the reference-style plane + compass. */
+#destinations.destinations.section { position: relative; isolation: isolate; }
+#destinations .travel-decor {
+  z-index: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: min(79%, 930px) !important;
+  height: 300px !important;
+  background: url('../img/decor-title-plane-compass.svg') center right / contain no-repeat !important;
+  opacity: .34 !important;
+  pointer-events: none;
+}
+#destinations .destination-heading,
+#destinations .destination-grid { position: relative; z-index: 1; }
+
+/* Bring the individual heading illustrations to the foreground of the section background. */
+.formats.section::before,
+.formats.section::after,
+.why.section.wrap::before,
+.request-section::before,
+.request-section::after {
+  z-index: 0 !important;
+  pointer-events: none;
+}
+.formats.section::before {
+  top: 8px !important;
+  right: max(20px, calc((100vw - 1320px) / 2)) !important;
+  width: min(42vw, 500px) !important;
+  height: 235px !important;
+  background-image: url('../img/decor-plane-route.svg') !important;
+  opacity: .21 !important;
+}
+.formats.section::after {
+  opacity: .08 !important;
+  width: min(230px, 20vw) !important;
+}
+.formats > .wrap,
+.request-wrap,
+.why.section.wrap > .section-heading,
+.why.section.wrap > .benefit-grid { position: relative; z-index: 1; }
+.why.section.wrap::before {
+  top: 0 !important;
+  right: max(20px, calc((100vw - 1320px) / 2)) !important;
+  width: min(40vw, 470px) !important;
+  height: 235px !important;
+  background-image: url('../img/decor-compass-map.svg') !important;
+  opacity: .17 !important;
+}
+.request-section::before {
+  top: 8px !important;
+  right: max(20px, calc((100vw - 1320px) / 2)) !important;
+  width: min(37vw, 440px) !important;
+  height: 220px !important;
+  background-image: url('../img/decor-postcard.svg') !important;
+  opacity: .16 !important;
+}
+.request-section::after {
+  top: 30px !important;
+  right: 3vw !important;
+  width: min(20vw, 250px) !important;
+  height: 175px !important;
+  background-image: url('../img/decor-hot-air.svg') !important;
+  opacity: .10 !important;
+}
+@media (max-width: 760px) {
+  #destinations .travel-decor {
+    top: 4px !important; right: -12vw !important;
+    width: 92vw !important; height: 190px !important;
+    opacity: .20 !important;
+  }
+  .formats.section::before {
+    top: 5px !important; right: 0 !important;
+    width: 62vw !important; height: 165px !important;
+    opacity: .10 !important;
+  }
+  .formats.section::after { width: 32vw !important; opacity: .035 !important; }
+  .why.section.wrap::before {
+    top: 5px !important; right: -3vw !important;
+    width: 60vw !important; height: 185px !important;
+    opacity: .10 !important;
+  }
+  .request-section::before {
+    top: 0 !important; right: 0 !important;
+    width: 54vw !important; height: 160px !important;
+    opacity: .09 !important;
+  }
+  .request-section::after {
+    top: 5px !important; right: 0 !important;
+    width: 30vw !important; height: 120px !important;
+    opacity: .045 !important;
+  }
+}
+
+
+/* Sixth title area: airmail ticket detail in the footer, kept separate from the content. */
+.footer { position: relative; isolation: isolate; overflow: hidden; }
+.footer::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: max(16px, calc((100vw - 1320px) / 2));
+  width: min(40vw, 500px);
+  height: 220px;
+  background: url('../img/decor-footer-ticket.svg') center right / contain no-repeat;
+  opacity: .10;
+  pointer-events: none;
+}
+.footer-main, .footer-bottom { position: relative; z-index: 1; }
+@media (max-width: 760px) {
+  .footer::before { top: 0; right: -5vw; width: 62vw; height: 170px; opacity: .055; }
+}
+
+
+/* Final contrast pass: darker, clearer travel ornaments while preserving a soft watermark look. */
+#destinations .travel-decor { opacity: .62 !important; }
+.formats.section::before { opacity: .43 !important; }
+.formats.section::after { opacity: .16 !important; }
+.why.section.wrap::before { opacity: .42 !important; }
+.request-section::before { opacity: .42 !important; }
+.request-section::after { opacity: .27 !important; }
+.footer::before { opacity: .30 !important; }
+@media (max-width: 760px) {
+  #destinations .travel-decor { opacity: .38 !important; }
+  .formats.section::before { opacity: .27 !important; }
+  .formats.section::after { opacity: .10 !important; }
+  .why.section.wrap::before { opacity: .26 !important; }
+  .request-section::before { opacity: .24 !important; }
+  .request-section::after { opacity: .17 !important; }
+  .footer::before { opacity: .18 !important; }
+}
+
+/* Final request-block adjustment: place the travel ornaments ON the right-side photo,
+   rather than underneath the photo layer, so they remain visible beside the sea-star image. */
+.request-section::before {
+  z-index: 3 !important;
+  top: 24px !important;
+  right: max(22px, calc((100vw - 1320px) / 2 + 18px)) !important;
+  width: clamp(145px, 17vw, 225px) !important;
+  height: 190px !important;
+  opacity: .58 !important;
+  background-position: center right !important;
+}
+.request-section::after {
+  z-index: 3 !important;
+  top: 175px !important;
+  right: max(28px, calc((100vw - 1320px) / 2 + 32px)) !important;
+  width: clamp(115px, 13vw, 170px) !important;
+  height: 145px !important;
+  opacity: .42 !important;
+}
+@media (max-width: 760px) {
+  .request-section::before {
+    top: 16px !important; right: 12px !important;
+    width: 135px !important; height: 145px !important; opacity: .42 !important;
+  }
+  .request-section::after {
+    top: 125px !important; right: 18px !important;
+    width: 100px !important; height: 110px !important; opacity: .30 !important;
+  }
+}
+
+/* Final cleanup: remove the hero fade completely and keep section backgrounds uniform. */
+.hero:not(.home-hero)::after,
+.hero.home-hero::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+#destinations.destinations.section,
+.formats.section,
+.why.section.wrap,
+#routes.section.wrap,
+.request-section {
+  background-color: #faf6ef !important;
+  background-image: none !important;
+}
+#destinations.destinations.section::before,
+.formats.section::before,
+.formats.section::after,
+.why.section.wrap::before,
+.why.section.wrap::after,
+.request-section::before,
+.request-section::after {
+  /* Preserve the travel illustrations; only remove gradients from section surfaces. */
+}
+
+
+/* Final correction: remove decorative travel illustrations from the sixth (request) block only. */
+.request-section::before,
+.request-section::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+
+/* ==========================================================
+   UZBEKISTAN PAGE — same Dream Compass component system,
+   with a restrained Silk Road palette and a full-screen hero.
+   ========================================================== */
+.uz-hero { min-height: min(920px, 100svh); height: 100svh; max-height: 1050px; }
+.uz-hero .hero-bg { background-size: cover !important; background-position: center 54% !important; transform: scale(1.015); }
+.uz-hero .hero-shade { background: linear-gradient(90deg, rgba(24,24,45,.72) 0%, rgba(24,24,45,.50) 39%, rgba(24,24,45,.08) 78%),linear-gradient(0deg, rgba(18,27,45,.25), transparent 34%, rgba(18,27,45,.10)); }
+.uz-hero .hero-content { padding-top: clamp(145px, 18vh, 205px); padding-bottom: 120px; }
+.uz-hero .hero-eyebrow { color: #e6c28a; }
+.uz-hero h1 em, .uz-hero h1 .hero-title-line:last-child { color: #e6c28a; }
+.uz-hero .hero-copy { max-width: 630px; }
+.uz-hero .hero-categories a { border-color: rgba(236,218,184,.32); color:#fff; }
+.uz-hero .hero-categories .line-icon, .uz-hero .hero-categories i { color: #e6c28a; }
+.uz-hero .hero-button, .uz-routes .button, .uz-nature .button, .uz-request .submit-button { background: #176b70; border-color: #176b70; }
+.uz-hero .hero-button:hover, .uz-routes .button:hover, .uz-nature .button:hover, .uz-request .submit-button:hover { background: #10565b; border-color: #10565b; }
+.uz-destinations { background: #f8f5ef; }
+.uz-destinations .eyebrow, .uz-routes .eyebrow, .uz-why .eyebrow, .uz-request .eyebrow { color: #176b70; }
+.uz-destinations .section-heading h2 em, .uz-routes .section-heading h2 em, .uz-why .section-heading h2 em, .uz-request .request-panel h2 em { color: #176b70; }
+.uz-destinations .destination-card { background: #183b48; }
+.uz-destinations .destination-card .image-shade { background: linear-gradient(0deg,rgba(13,30,44,.86),rgba(13,30,44,.02) 80%); }
+.uz-destinations .destination-info strong { color: #fff; }
+.uz-destinations .destination-info span { color: rgba(255,255,255,.86); }
+.uz-destinations .round-arrow { border-color: rgba(235,207,155,.7); color: #f0d4a1; }
+.uz-routes { background: #f0ece3; position:relative; overflow:hidden; }
+.uz-routes .format-card { background:#173e49; }
+.uz-routes .format-card .image-shade { background:linear-gradient(0deg,rgba(13,30,44,.86),rgba(13,30,44,.03) 85%); }
+.uz-routes .format-icon { color:#e6c28a; }
+.uz-note { margin:24px auto 0; max-width:900px; padding:16px 20px; border-left:3px solid #176b70; background:rgba(255,255,255,.68); color:#626a70; font-size:13px; line-height:1.65; }
+.uz-nature { position:relative; min-height:510px; display:flex; align-items:center; overflow:hidden; color:#fff; background:#163b49; }
+.uz-nature-image { position:absolute; inset:0; background:url('../img/banner-bg.webp') center 48%/cover no-repeat; }
+.uz-nature-shade { position:absolute; inset:0; background:linear-gradient(90deg,rgba(13,35,49,.86),rgba(13,35,49,.56) 47%,rgba(13,35,49,.12)); }
+.uz-nature-content { position:relative; z-index:1; padding-top:80px; padding-bottom:80px; }
+.uz-nature .eyebrow { color:#e6c28a; }
+.uz-nature h2 { max-width:650px; margin:0 0 22px; }
+.uz-nature h2 em { color:#e6c28a; }
+.uz-nature p:not(.eyebrow) { max-width:560px; color:rgba(255,255,255,.86); line-height:1.75; margin-bottom:28px; }
+.uz-why { background:#f8f5ef; }
+.uz-why .benefit-icon { color:#176b70; }
+.uz-request { background:#e9e4da; }
+.uz-request .request-panel { background:#fbf9f4; }
+.uz-request .request-visual { background:#173e49; }
+.uz-request .request-visual img { object-position:center; }
+.uz-request .visual-overlay { background:linear-gradient(180deg,rgba(13,35,49,.05),rgba(13,35,49,.42)); }
+.uz-request .quote-mark, .uz-request .note-compass { color:#e6c28a; }
+.uz-request .request-panel h2 em { color:#176b70; }
+.uz-request .field input:focus, .uz-request .field select:focus, .uz-request .field textarea:focus { border-color:#176b70; outline-color:#176b70; }
+.uz-hero .hero-title-line { display:block; }
+.uz-hero .hero-content h1 { max-width:900px; }
+.uz-hero .hero-content h1 em { display:block; font-style:normal; }
+.uz-hero .hero-categories { max-width:680px; }
+/* Clean navy footer: no ticket, compass or star artwork. */
+.footer { background:#14233e !important; position:relative; isolation:isolate; overflow:hidden; }
+.footer::before, .footer::after { content:none !important; display:none !important; background:none !important; }
+.footer .note-compass, .footer .footer-decoration, .footer .footer-ornament { display:none !important; }
+@media (max-width:760px) {
+ .uz-hero { height:auto; min-height:850px; max-height:none; }
+ .uz-hero .hero-bg { background-position:56% center !important; }
+ .uz-hero .hero-shade { background:linear-gradient(90deg,rgba(24,24,45,.74),rgba(24,24,45,.38)),linear-gradient(0deg,rgba(18,27,45,.28),transparent 50%); }
+ .uz-hero .hero-content { padding-top:145px; padding-bottom:120px; }
+ .uz-hero .hero-categories { display:grid; grid-template-columns:1fr; max-width:300px; gap:8px; }
+ .uz-hero .hero-categories a { min-height:40px; }
+ .uz-nature { min-height:560px; }
+ .uz-nature-shade { background:linear-gradient(90deg,rgba(13,35,49,.82),rgba(13,35,49,.42)); }
+}
+
+
+/* ==============================================================
+   DREAM COMPASS — Uzbekistan visual system.
+   Local scope: international page keeps its established styling.
+   Palette: glazed turquoise, lapis blue, parchment, muted bronze.
+   ============================================================== */
+body.page-uzbekistan {
+  --uz-ink: #153440;
+  --uz-deep: #102e40;
+  --uz-teal: #176b70;
+  --uz-teal-bright: #247e7d;
+  --uz-lapis: #245c82;
+  --uz-parchment: #f0e6d6;
+  --uz-sand: #e6dbca;
+  --uz-paper: #f7f1e7;
+  --uz-bronze: #a87958;
+  --uz-muted: #667474;
+  background: var(--uz-parchment);
+  color: var(--uz-ink);
+}
+body.page-uzbekistan .site-header:not(.scrolled) {
+  background: linear-gradient(180deg, rgba(12,38,54,.72) 0%, rgba(12,38,54,.32) 72%, transparent 100%);
+}
+body.page-uzbekistan .site-header::before { content:none !important; display:none !important; }
+body.page-uzbekistan .site-header .nav-link:after { background: #6ec1bb; }
+body.page-uzbekistan .site-header .nav-link.active { color: #b8e2dc !important; }
+body.page-uzbekistan .site-header.scrolled {
+  background: rgba(240,230,214,.96);
+  color: var(--uz-deep);
+  border-bottom: 1px solid rgba(23,107,112,.13);
+}
+body.page-uzbekistan .site-header.scrolled .nav-link.active { color: var(--uz-teal) !important; }
+body.page-uzbekistan .site-header .button-small,
+body.page-uzbekistan .button,
+body.page-uzbekistan button.button {
+  background: var(--uz-teal);
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(16,70,75,.22);
+}
+body.page-uzbekistan .site-header .button-small:hover,
+body.page-uzbekistan .button:hover {
+  background: #10565b;
+  box-shadow: 0 14px 30px rgba(16,70,75,.27);
+}
+body.page-uzbekistan .hero.uz-hero {
+  height: 100svh;
+  min-height: 760px;
+  max-height: 1040px;
+  background: var(--uz-deep);
+}
+body.page-uzbekistan .uz-hero .hero-bg {
+  background-image: url('../img/registan-hero.webp') !important;
+  background-size: cover !important;
+  background-position: center 51% !important;
+  transform: none;
+}
+body.page-uzbekistan .uz-hero .hero-shade {
+  /* Keep the photo natural; the dark gradient is concentrated behind the copy. */
+  background: linear-gradient(90deg, rgba(10,35,49,.79) 0%, rgba(10,35,49,.63) 29%, rgba(10,35,49,.23) 56%, rgba(10,35,49,.02) 82%),
+              linear-gradient(0deg, rgba(10,35,49,.22) 0%, transparent 34%);
+}
+body.page-uzbekistan .uz-hero .hero-content {
+  padding-top: clamp(135px, 17vh, 195px);
+  padding-bottom: 110px;
+  position: relative;
+  z-index: 2;
+}
+body.page-uzbekistan .uz-hero .hero-eyebrow { color: #9cdbd1; letter-spacing: .19em; }
+body.page-uzbekistan .uz-hero h1 { color: #fffaf1; }
+body.page-uzbekistan .uz-hero h1 em,
+body.page-uzbekistan .uz-hero h1 .hero-title-line:last-child {
+  color: #9ddbd3;
+}
+body.page-uzbekistan .uz-hero .hero-copy { color: rgba(255,250,241,.92); max-width: 620px; }
+body.page-uzbekistan .uz-hero .hero-categories a {
+  border-color: rgba(189,224,215,.36);
+  color: #f8f4eb;
+  background: rgba(11,49,61,.15);
+}
+body.page-uzbekistan .uz-hero .hero-categories a:hover {
+  border-color: #9ddbd3;
+  background: rgba(14,80,87,.5);
+}
+body.page-uzbekistan .uz-hero .hero-categories .line-icon,
+body.page-uzbekistan .uz-hero .hero-categories i { color: #9ddbd3; }
+body.page-uzbekistan .uz-hero .scroll-cue { color: rgba(255,250,241,.8); }
+
+/* Block 2 — warm sandstone rather than stark white. */
+body.page-uzbekistan #destinations.destinations.section.wrap {
+  background: var(--uz-sand) !important;
+}
+body.page-uzbekistan #destinations.destinations.section::before {
+  background: linear-gradient(135deg, #e8dfd1 0%, #f1e9dd 56%, #e2e8df 100%) !important;
+}
+body.page-uzbekistan #destinations .travel-decor { display: none !important; }
+body.page-uzbekistan .uz-destinations .eyebrow,
+body.page-uzbekistan .uz-why .eyebrow { color: var(--uz-teal); }
+body.page-uzbekistan .uz-destinations .section-heading h2 em,
+body.page-uzbekistan .uz-why .section-heading h2 em { color: var(--uz-teal); }
+body.page-uzbekistan .uz-destinations .section-lead,
+body.page-uzbekistan .uz-why .section-lead { color: #596b6c; }
+body.page-uzbekistan .uz-destinations .destination-card,
+body.page-uzbekistan .uz-routes .format-card { background: #153d4b; }
+body.page-uzbekistan .uz-destinations .destination-card img,
+body.page-uzbekistan .uz-routes .format-card img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+body.page-uzbekistan .uz-destinations .destination-card:nth-child(1) img { object-position: center 50%; }
+body.page-uzbekistan .uz-destinations .destination-card:nth-child(2) img { object-position: center 52%; }
+body.page-uzbekistan .uz-destinations .destination-card:nth-child(3) img { object-position: center 52%; }
+body.page-uzbekistan .uz-destinations .destination-card:nth-child(4) img { object-position: center 55%; }
+body.page-uzbekistan .uz-destinations .destination-card .image-shade {
+  background: linear-gradient(0deg, rgba(8,31,42,.9) 0%, rgba(8,31,42,.34) 44%, rgba(8,31,42,.02) 100%);
+}
+body.page-uzbekistan .uz-destinations .round-arrow {
+  color: #b6e5dc; border-color: rgba(182,229,220,.68);
+}
+
+/* Block 3 — lapis and deep teal, with clear card contrast. */
+body.page-uzbekistan .uz-routes {
+  background: linear-gradient(145deg, #123746 0%, #174a55 55%, #183c53 100%) !important;
+  color: #f8f1e7;
+}
+body.page-uzbekistan .uz-routes .section-heading h2 { color: #fff7ec; }
+body.page-uzbekistan .uz-routes .section-heading h2 em { color: #9ddbd3; }
+body.page-uzbekistan .uz-routes .section-lead { color: rgba(244,241,231,.78); }
+body.page-uzbekistan .uz-routes .eyebrow { color: #9ddbd3; }
+body.page-uzbekistan .uz-routes::before,
+body.page-uzbekistan .uz-routes::after { content:none !important; display:none !important; }
+body.page-uzbekistan .uz-routes .format-card {
+  border: 1px solid rgba(186,220,210,.15);
+  box-shadow: 0 15px 38px rgba(4,21,31,.23);
+}
+body.page-uzbekistan .uz-routes .format-card .image-shade {
+  background: linear-gradient(0deg, rgba(7,26,38,.88), rgba(7,26,38,.07) 92%);
+}
+body.page-uzbekistan .uz-routes .format-icon { color: #a9e0d5; }
+body.page-uzbekistan .uz-routes .format-copy strong { color: #fffaf1; }
+body.page-uzbekistan .uz-routes .format-copy small { color: rgba(255,250,241,.77); }
+body.page-uzbekistan .uz-routes .format-arrow { color: #a9e0d5; }
+body.page-uzbekistan .uz-routes .format-cta { margin-top: 30px; }
+body.page-uzbekistan .uz-routes .format-cta .button { background: #247e7d; }
+body.page-uzbekistan .uz-note { display:none !important; }
+
+/* Block 4 — the submitted mountain panorama spans edge to edge. */
+body.page-uzbekistan .uz-nature {
+  min-height: 560px;
+  width: 100%;
+  color: #fffaf1;
+  background: #143846;
+}
+body.page-uzbekistan .uz-nature-image {
+  background-image: url('../img/mountains-uzbekistan-wide.webp') !important;
+  background-size: cover !important;
+  background-position: center 56% !important;
+}
+body.page-uzbekistan .uz-nature-shade {
+  background: linear-gradient(90deg, rgba(10,37,49,.78) 0%, rgba(10,37,49,.57) 37%, rgba(10,37,49,.06) 78%);
+}
+body.page-uzbekistan .uz-nature .eyebrow { color: #a9e0d5; }
+body.page-uzbekistan .uz-nature h2 { color: #fffaf1; }
+body.page-uzbekistan .uz-nature h2 em { color: #a9e0d5; }
+body.page-uzbekistan .uz-nature p:not(.eyebrow) { color: rgba(255,250,241,.9); }
+body.page-uzbekistan .uz-nature .button { background: #247e7d; }
+
+/* Block 5 — four submitted Uzbekistan travel photos in cropped square cards. */
+body.page-uzbekistan .uz-why { background: transparent !important; }
+body.page-uzbekistan .uz-why.section.wrap::after {
+  background: linear-gradient(135deg, #e1eae3 0%, #edf0e7 47%, #e7e0d2 100%) !important;
+}
+body.page-uzbekistan .uz-why::before { content:none !important; display:none !important; }
+body.page-uzbekistan .uz-why .benefit-card { background: rgba(250,247,239,.92); border: 1px solid rgba(23,71,75,.08); }
+body.page-uzbekistan .uz-why .benefit-photo {
+  overflow: hidden; aspect-ratio: 1 / 1;
+}
+body.page-uzbekistan .uz-why .benefit-photo img {
+  display:block; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+body.page-uzbekistan .uz-why .benefit-card:nth-child(1) .benefit-photo img { object-position:center 52%; }
+body.page-uzbekistan .uz-why .benefit-card:nth-child(2) .benefit-photo img { object-position:center 48%; }
+body.page-uzbekistan .uz-why .benefit-card:nth-child(3) .benefit-photo img { object-position:center 50%; }
+body.page-uzbekistan .uz-why .benefit-card:nth-child(4) .benefit-photo img { object-position:center 52%; }
+body.page-uzbekistan .uz-why .benefit-icon { color: #176b70; background: #f6f0e5; }
+
+/* Block 6 — parchment form against an architectural turquoise photo. */
+body.page-uzbekistan .uz-request {
+  background: #163d4b !important;
+  padding-top: 92px; padding-bottom: 92px;
+}
+body.page-uzbekistan .uz-request .request-wrap {
+  background: #f3eadb;
+  box-shadow: 0 24px 70px rgba(3,22,35,.25);
+}
+body.page-uzbekistan .uz-request .request-panel { background: #f3eadb; }
+body.page-uzbekistan .uz-request .eyebrow { color: #176b70; }
+body.page-uzbekistan .uz-request .request-panel h2 { color: #153440; }
+body.page-uzbekistan .uz-request .request-panel h2 em { color: #176b70; }
+body.page-uzbekistan .uz-request .section-lead { color: #667474; }
+body.page-uzbekistan .uz-request .field > span,
+body.page-uzbekistan .uz-request .choice-field legend { color: #153440; }
+body.page-uzbekistan .uz-request .field input,
+body.page-uzbekistan .uz-request .field select,
+body.page-uzbekistan .uz-request .field textarea {
+  background: #fcfaf5;
+  border-color: #d9cec0;
+  color: #153440;
+}
+body.page-uzbekistan .uz-request .field input:focus,
+body.page-uzbekistan .uz-request .field select:focus,
+body.page-uzbekistan .uz-request .field textarea:focus {
+  border-color: #247e7d; outline-color: #247e7d;
+}
+body.page-uzbekistan .uz-request .choice-row label span { background:#fcfaf5; border-color:#d9cec0; color:#153440; }
+body.page-uzbekistan .uz-request .choice-row input:checked + span { background:#176b70; border-color:#176b70; color:#fff; }
+body.page-uzbekistan .uz-request .request-visual { background:#174652; }
+body.page-uzbekistan .uz-request .request-visual img {
+  object-fit:cover; object-position:center 45%;
+  filter:none;
+}
+body.page-uzbekistan .uz-request .visual-overlay {
+  background: linear-gradient(180deg, rgba(13,42,53,.04), rgba(13,42,53,.32));
+}
+body.page-uzbekistan .uz-request .quote-mark,
+body.page-uzbekistan .uz-request .note-compass { color:#9ddbd3; }
+body.page-uzbekistan .uz-request .submit-button { background:#176b70; }
+
+/* Suppress unrelated Western travel motifs on this Eastern page. */
+body.page-uzbekistan #destinations .travel-decor,
+body.page-uzbekistan .formats::before,
+body.page-uzbekistan .formats::after,
+body.page-uzbekistan .why.section.wrap::before,
+body.page-uzbekistan .request-section::before,
+body.page-uzbekistan .request-section::after { display:none !important; content:none !important; background:none !important; }
+body.page-uzbekistan .footer { background:#102e40 !important; }
+body.page-uzbekistan .footer-bottom { border-color:rgba(180,220,211,.18); }
+body.page-uzbekistan .footer-bottom a { color:#a9e0d5; }
+body.page-uzbekistan .footer .footer-links a:hover,
+body.page-uzbekistan .footer .footer-contact a:hover { color:#a9e0d5; }
+
+@media(max-width:900px) {
+  body.page-uzbekistan .uz-hero { min-height:800px; }
+  body.page-uzbekistan .uz-hero .hero-shade {
+    background:linear-gradient(90deg,rgba(10,35,49,.78),rgba(10,35,49,.42) 72%,rgba(10,35,49,.18)),
+               linear-gradient(0deg,rgba(10,35,49,.35),transparent 44%);
+  }
+}
+@media(max-width:760px) {
+  body.page-uzbekistan .uz-hero { height:auto; min-height:850px; max-height:none; }
+  body.page-uzbekistan .uz-hero .hero-bg { background-position:52% center !important; }
+  body.page-uzbekistan .uz-hero .hero-content { padding-top:155px; padding-bottom:115px; }
+  body.page-uzbekistan .uz-hero .hero-categories { display:grid; grid-template-columns:1fr; max-width:320px; }
+  body.page-uzbekistan .uz-routes { padding-top:76px; padding-bottom:76px; }
+  body.page-uzbekistan .uz-nature { min-height:620px; }
+  body.page-uzbekistan .uz-nature-image { background-position:54% center !important; }
+  body.page-uzbekistan .uz-nature-shade { background:linear-gradient(90deg,rgba(10,37,49,.78),rgba(10,37,49,.42)); }
+  body.page-uzbekistan .uz-request { padding-top:58px; padding-bottom:58px; }
+  body.page-uzbekistan .uz-request .request-visual { min-height:360px; }
+}
+
+
+/* Route detail dialogs use each original route photo and a compact itinerary. */
+body.page-uzbekistan #detailModal {
+  position: fixed; inset: 0; margin: auto;
+  width: min(960px, calc(100% - 30px));
+  max-width: 960px;
+  padding: 0;
+  border: 1px solid rgba(157,219,211,.22);
+  border-radius: 22px;
+  overflow: auto;
+  background: #f3eadb;
+  color: #153440;
+}
+body.page-uzbekistan #detailModal .modal-close {
+  position: absolute; top: 14px; right: 14px; float: none;
+  margin: 0; background: rgba(248,244,235,.95); color: #153440;
+  border-color: rgba(21,52,64,.15);
+}
+body.page-uzbekistan .detail-modal-content {
+  display: grid;
+  grid-template-columns: minmax(260px,.88fr) minmax(0,1.12fr);
+  align-items: stretch;
+}
+body.page-uzbekistan .detail-modal-image {
+  min-height: 540px; background: #123746; overflow:hidden;
+}
+body.page-uzbekistan .detail-modal-image img {
+  width:100%; height:100%; min-height:540px; object-fit:cover; object-position:center;
+}
+body.page-uzbekistan .detail-modal-copy { padding: 42px clamp(24px,3vw,40px) 36px; }
+body.page-uzbekistan .detail-modal-copy .eyebrow { color:#176b70; font-size:11px; letter-spacing:.13em; }
+body.page-uzbekistan .detail-modal-content h2 { color:#153440; font-size:clamp(35px,4vw,48px); }
+body.page-uzbekistan .detail-modal-content>p:not(.eyebrow) { color:#657574; }
+body.page-uzbekistan .detail-program { margin-top:22px; }
+body.page-uzbekistan .detail-program h3 {
+  margin:0 0 11px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#176b70;
+}
+body.page-uzbekistan .program-item {
+  display:grid; gap:5px; padding:12px 0; border-top:1px solid rgba(21,52,64,.12);
+}
+body.page-uzbekistan .program-item b { color:#153440; font-size:13px; font-weight:700; }
+body.page-uzbekistan .program-item span { color:#657574; font-size:12px; line-height:1.65; }
+body.page-uzbekistan #detailModal .detail-actions .button { background:#176b70; }
+body.page-uzbekistan #detailModal .text-button { color:#176b70; }
+@media(max-width:760px) {
+  body.page-uzbekistan #detailModal { max-height:90vh; }
+  body.page-uzbekistan .detail-modal-content { grid-template-columns:1fr; }
+  body.page-uzbekistan .detail-modal-image { min-height:210px; height:210px; }
+  body.page-uzbekistan .detail-modal-image img { min-height:210px; height:210px; }
+  body.page-uzbekistan .detail-modal-copy { padding:28px 22px 26px; }
+}
+
+
+/* Final Uzbekistan-only colour override: teal replaces the site's former amber CTA. */
+body.page-uzbekistan .button,
+body.page-uzbekistan .button:link,
+body.page-uzbekistan .button:visited,
+body.page-uzbekistan .button-small,
+body.page-uzbekistan .site-header .button-small,
+body.page-uzbekistan .hero-button,
+body.page-uzbekistan .format-cta .button,
+body.page-uzbekistan .uz-request .submit-button {
+  color: #fffaf1 !important;
+  background: #176b70 !important;
+  background-image: none !important;
+  border-color: #176b70 !important;
+}
+body.page-uzbekistan .button:hover,
+body.page-uzbekistan .button:focus-visible,
+body.page-uzbekistan .site-header .button-small:hover {
+  color: #fffaf1 !important;
+  background: #10565b !important;
+  background-image: none !important;
+  border-color: #10565b !important;
+}
+body.page-uzbekistan .site-header .nav-link:after { background: #7ac8bf !important; }
+body.page-uzbekistan .site-header.scrolled {
+  background: rgba(240,230,214,.97) !important;
+  background-image: none !important;
+  color: #153440 !important;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 28px rgba(16,46,64,.12);
+}
+body.page-uzbekistan .site-header.scrolled .nav-link,
+body.page-uzbekistan .site-header.scrolled .brand,
+body.page-uzbekistan .site-header.scrolled .language-current { color:#153440 !important; text-shadow:none !important; }
+
+/* Benefit imagery fills each card edge-to-edge; square crop keeps the four-card rhythm. */
+body.page-uzbekistan .uz-why .benefit-photo {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  display: block;
+  overflow: hidden;
+}
+body.page-uzbekistan .uz-why .benefit-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  object-fit: cover;
+}
+body.page-uzbekistan .uz-request .visual-note small { color: #176b70 !important; }
+body.page-uzbekistan .uz-request .visual-note .quote-mark { color: #70c5ba !important; }
+
+body.page-uzbekistan .uz-why .benefit-photo { overflow: visible !important; }
+body.page-uzbekistan .uz-why .benefit-photo > img { border-radius: 0; }
+
+
+/* ==============================================================
+   Feedback pass 1 — calmer accent, neutral black hero vignette,
+   frosted arrow buttons, and a seamless mountain-section fade.
+   ============================================================== */
+body.page-uzbekistan {
+  --uz-teal: #245a60;
+  --uz-teal-bright: #376e72;
+  --uz-lapis: #315e78;
+}
+
+/* Hero: neutral black falloff, not a blue cast. Keep the centre/right photo natural. */
+body.page-uzbekistan .uz-hero .hero-shade {
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.77) 0%,
+      rgba(0,0,0,.63) 24%,
+      rgba(0,0,0,.38) 43%,
+      rgba(0,0,0,.10) 68%,
+      rgba(0,0,0,0) 86%),
+    linear-gradient(0deg, rgba(0,0,0,.14) 0%, transparent 28%, rgba(0,0,0,.05) 100%) !important;
+}
+body.page-uzbekistan .uz-hero .hero-eyebrow,
+body.page-uzbekistan .uz-hero h1 em,
+body.page-uzbekistan .uz-hero h1 .hero-title-line:last-child,
+body.page-uzbekistan .uz-hero .hero-categories .line-icon,
+body.page-uzbekistan .uz-hero .hero-categories i {
+  color: #8fbab2 !important;
+}
+body.page-uzbekistan .site-header .nav-link:after { background: #5f9691 !important; }
+body.page-uzbekistan .site-header .nav-link.active { color: #9cc9c1 !important; }
+body.page-uzbekistan .site-header.scrolled .nav-link.active { color: #245a60 !important; }
+
+/* Muted glazed-tile teal: dark enough to feel refined, not electric. */
+body.page-uzbekistan .button,
+body.page-uzbekistan .button:link,
+body.page-uzbekistan .button:visited,
+body.page-uzbekistan .button-small,
+body.page-uzbekistan .site-header .button-small,
+body.page-uzbekistan .hero-button,
+body.page-uzbekistan .format-cta .button,
+body.page-uzbekistan .uz-routes .button,
+body.page-uzbekistan .uz-nature .button,
+body.page-uzbekistan .uz-request .submit-button {
+  color: #fbf6ed !important;
+  background: #245a60 !important;
+  background-image: none !important;
+  border-color: #245a60 !important;
+}
+body.page-uzbekistan .button:hover,
+body.page-uzbekistan .button:focus-visible,
+body.page-uzbekistan .site-header .button-small:hover {
+  color: #fbf6ed !important;
+  background: #19464c !important;
+  background-image: none !important;
+  border-color: #19464c !important;
+  box-shadow: 0 12px 25px rgba(7,29,35,.20);
+}
+body.page-uzbekistan .uz-destinations .eyebrow,
+body.page-uzbekistan .uz-why .eyebrow,
+body.page-uzbekistan .uz-destinations .section-heading h2 em,
+body.page-uzbekistan .uz-why .section-heading h2 em,
+body.page-uzbekistan .uz-request .request-panel h2 em {
+  color: #326a6e !important;
+}
+body.page-uzbekistan .uz-routes .section-heading h2 em,
+body.page-uzbekistan .uz-nature h2 em,
+body.page-uzbekistan .uz-routes .eyebrow,
+body.page-uzbekistan .uz-nature .eyebrow,
+body.page-uzbekistan .uz-routes .format-icon,
+body.page-uzbekistan .uz-routes .format-arrow,
+body.page-uzbekistan .uz-request .quote-mark,
+body.page-uzbekistan .uz-request .note-compass {
+  color: #8fbab2 !important;
+}
+body.page-uzbekistan .uz-destinations .round-arrow,
+body.page-uzbekistan .uz-routes .format-arrow {
+  color: #d9e4df;
+  border-color: rgba(225,234,230,.42);
+}
+
+/* Shared frosted-glass treatment for round arrows, including hover states. */
+body.page-uzbekistan .round-arrow,
+body.page-uzbekistan .format-arrow {
+  background: rgba(211,222,220,.09) !important;
+  border: 1px solid rgba(235,242,239,.38) !important;
+  color: rgba(247,248,244,.94) !important;
+  -webkit-backdrop-filter: blur(9px) saturate(115%);
+  backdrop-filter: blur(9px) saturate(115%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 4px 14px rgba(4,18,26,.08);
+}
+body.page-uzbekistan .destination-card:hover .round-arrow,
+body.page-uzbekistan .format-card:hover .format-arrow,
+body.page-uzbekistan .destination-card:focus-visible .round-arrow,
+body.page-uzbekistan .format-card:focus-visible .format-arrow {
+  background: rgba(208,220,217,.19) !important;
+  border-color: rgba(242,247,243,.56) !important;
+  color: #fff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 6px 18px rgba(4,18,26,.12);
+}
+
+/* Remove vignette/edge-darkening from the photo transition and fade the panorama
+   in from the top so it merges into the deep blue-green route section above. */
+body.page-uzbekistan .uz-nature {
+  background: #183c53 !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+body.page-uzbekistan .uz-nature-image {
+  inset: 0;
+  background-image: url('../img/mountains-uzbekistan-wide.webp') !important;
+  background-size: cover !important;
+  background-position: center 56% !important;
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.12) 7%,
+    rgba(0,0,0,.48) 19%,
+    rgba(0,0,0,.82) 30%,
+    #000 42%);
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.12) 7%,
+    rgba(0,0,0,.48) 19%,
+    rgba(0,0,0,.82) 30%,
+    #000 42%);
+}
+body.page-uzbekistan .uz-nature-shade {
+  background: linear-gradient(90deg,
+    rgba(0,0,0,.48) 0%,
+    rgba(0,0,0,.30) 31%,
+    rgba(0,0,0,.12) 51%,
+    rgba(0,0,0,0) 70%) !important;
+}
+@media(max-width:760px) {
+  body.page-uzbekistan .uz-hero .hero-shade {
+    background:
+      linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.50) 48%,rgba(0,0,0,.15) 100%),
+      linear-gradient(0deg,rgba(0,0,0,.2),transparent 45%) !important;
+  }
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.34) 15%, #000 34%);
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.34) 15%, #000 34%);
+  }
+  body.page-uzbekistan .uz-nature-shade {
+    background: linear-gradient(90deg,rgba(0,0,0,.54),rgba(0,0,0,.22) 72%,transparent) !important;
+  }
+}
+
+
+/* Screenshot refinement: reduce the hero vignette by ~40%, soften the route-to-mountain seam. */
+body.page-uzbekistan .uz-hero .hero-shade {
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.46) 0%,
+      rgba(0,0,0,.38) 24%,
+      rgba(0,0,0,.23) 43%,
+      rgba(0,0,0,.06) 68%,
+      rgba(0,0,0,0) 86%),
+    linear-gradient(0deg, rgba(0,0,0,.08) 0%, transparent 28%, rgba(0,0,0,.03) 100%) !important;
+}
+
+/* Match the top of the mountain section to the teal lower edge of the route section.
+   The panorama itself fades in from transparent across roughly 1–1.5 cm on screen. */
+body.page-uzbekistan .uz-nature {
+  background: linear-gradient(180deg,
+    #174a55 0%,
+    #174854 5%,
+    #174653 13%,
+    #183f50 24%,
+    #183c53 43%,
+    #183c53 100%) !important;
+  isolation: isolate;
+  overflow: hidden;
+}
+body.page-uzbekistan .uz-nature-image {
+  inset: 0 !important;
+  background-image: url('../img/mountains-uzbekistan-wide.webp') !important;
+  background-size: cover !important;
+  background-position: center 56% !important;
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.05) 2%,
+    rgba(0,0,0,.20) 5%,
+    rgba(0,0,0,.48) 9%,
+    rgba(0,0,0,.78) 12%,
+    #000 15%);
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.04) 3%,
+    rgba(0,0,0,.18) 8%,
+    rgba(0,0,0,.45) 14%,
+    rgba(0,0,0,.75) 19%,
+    #000 25%);
+}
+body.page-uzbekistan .uz-nature-shade {
+  background: linear-gradient(90deg,
+    rgba(0,0,0,.48) 0%,
+    rgba(0,0,0,.29) 31%,
+    rgba(0,0,0,.11) 51%,
+    rgba(0,0,0,0) 70%) !important;
+}
+@media (max-width:760px) {
+  body.page-uzbekistan .uz-hero .hero-shade {
+    background:
+      linear-gradient(90deg,
+        rgba(0,0,0,.47) 0%,
+        rgba(0,0,0,.34) 38%,
+        rgba(0,0,0,.14) 72%,
+        rgba(0,0,0,.04) 100%),
+      linear-gradient(0deg,rgba(0,0,0,.10),transparent 45%) !important;
+  }
+  body.page-uzbekistan .uz-nature {
+    background: linear-gradient(180deg,#174a55 0%,#174854 7%,#183f50 20%,#183c53 42%,#183c53 100%) !important;
+  }
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.08) 3%,
+      rgba(0,0,0,.32) 7%,
+      rgba(0,0,0,.7) 12%,
+      #000 17%);
+    mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.08) 5%,
+      rgba(0,0,0,.32) 12%,
+      rgba(0,0,0,.7) 19%,
+      #000 27%);
+  }
+}
+
+
+/* FINAL MICRO-REFINEMENT — hero warmth, softer vignette, cloud-like top fade. */
+
+/* Restore a little of the hero vignette: ~30% softer than the original, not 40%. */
+body.page-uzbekistan .uz-hero .hero-bg {
+  filter: sepia(.10) saturate(1.08) brightness(1.025) !important;
+}
+body.page-uzbekistan .uz-hero .hero-shade {
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.54) 0%,
+      rgba(0,0,0,.44) 24%,
+      rgba(0,0,0,.27) 43%,
+      rgba(0,0,0,.07) 68%,
+      rgba(0,0,0,0) 86%),
+    linear-gradient(0deg, rgba(0,0,0,.10) 0%, transparent 30%, rgba(0,0,0,.035) 100%) !important;
+}
+
+/* A genuine top-to-bottom alpha fade on the mountain image:
+   the first pixels are transparent, the panorama gradually appears lower down. */
+body.page-uzbekistan .uz-nature {
+  position: relative;
+  background: #174a55 !important;
+  isolation: isolate;
+  overflow: hidden;
+}
+body.page-uzbekistan .uz-nature-image {
+  inset: 0 !important;
+  background-image: url('../img/mountains-uzbekistan-wide.webp') !important;
+  background-size: cover !important;
+  background-position: center 56% !important;
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.015) 6%,
+    rgba(0,0,0,.06) 12%,
+    rgba(0,0,0,.16) 19%,
+    rgba(0,0,0,.31) 26%,
+    rgba(0,0,0,.52) 33%,
+    rgba(0,0,0,.75) 39%,
+    rgba(0,0,0,.92) 44%,
+    #000 49%) !important;
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.015) 6%,
+    rgba(0,0,0,.06) 12%,
+    rgba(0,0,0,.16) 19%,
+    rgba(0,0,0,.31) 26%,
+    rgba(0,0,0,.52) 33%,
+    rgba(0,0,0,.75) 39%,
+    rgba(0,0,0,.92) 44%,
+    #000 49%) !important;
+}
+/* Atmospheric haze on top of the photo, matching the route block above. */
+body.page-uzbekistan .uz-nature::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 auto 0;
+  height: 51%;
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    #174a55 0%,
+    rgba(23,74,85,.92) 17%,
+    rgba(23,74,85,.70) 35%,
+    rgba(23,74,85,.38) 57%,
+    rgba(23,74,85,.12) 78%,
+    rgba(23,74,85,0) 100%);
+}
+/* Keep the separate left-side legibility shade gentle; don't create a vignette around the whole section. */
+body.page-uzbekistan .uz-nature-shade {
+  z-index: 1;
+  background: linear-gradient(90deg,
+    rgba(0,0,0,.42) 0%,
+    rgba(0,0,0,.25) 31%,
+    rgba(0,0,0,.09) 51%,
+    rgba(0,0,0,0) 70%) !important;
+}
+body.page-uzbekistan .uz-nature-content {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width:760px) {
+  body.page-uzbekistan .uz-hero .hero-shade {
+    background:
+      linear-gradient(90deg,
+        rgba(0,0,0,.55) 0%,
+        rgba(0,0,0,.40) 38%,
+        rgba(0,0,0,.18) 72%,
+        rgba(0,0,0,.055) 100%),
+      linear-gradient(0deg,rgba(0,0,0,.10),transparent 45%) !important;
+  }
+  body.page-uzbekistan .uz-nature {
+    background: #174a55 !important;
+  }
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.025) 6%,
+      rgba(0,0,0,.09) 13%,
+      rgba(0,0,0,.25) 22%,
+      rgba(0,0,0,.52) 32%,
+      rgba(0,0,0,.80) 43%,
+      #000 52%) !important;
+    mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.025) 6%,
+      rgba(0,0,0,.09) 13%,
+      rgba(0,0,0,.25) 22%,
+      rgba(0,0,0,.52) 32%,
+      rgba(0,0,0,.80) 43%,
+      #000 52%) !important;
+  }
+  body.page-uzbekistan .uz-nature::before {
+    height: 57%;
+    background: linear-gradient(to bottom,
+      #174a55 0%,
+      rgba(23,74,85,.92) 17%,
+      rgba(23,74,85,.68) 39%,
+      rgba(23,74,85,.30) 68%,
+      rgba(23,74,85,0) 100%);
+  }
+}
+
+/* Footer links: barely perceptible premium scale on hover. */
+body.page-uzbekistan .footer-links a,
+body.page-uzbekistan .footer-contact a,
+body.page-uzbekistan .footer-bottom a {
+  display: inline-block;
+  transform: scale(1);
+  transform-origin: left center;
+  transition: color .2s ease, transform .2s ease;
+}
+body.page-uzbekistan .footer-links a:hover,
+body.page-uzbekistan .footer-contact a:hover,
+body.page-uzbekistan .footer-bottom a:hover {
+  transform: scale(1.018);
+}
+
+/* Modal close control: turn red only while hovered/focused. */
+body.page-uzbekistan .modal-close {
+  transition: color .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+body.page-uzbekistan .modal-close:hover,
+body.page-uzbekistan .modal-close:focus-visible {
+  color: #fff !important;
+  background: #b83c42 !important;
+  border-color: #b83c42 !important;
+  box-shadow: 0 0 0 4px rgba(184,60,66,.15), 0 4px 12px rgba(115,25,31,.2);
+  transform: scale(1.04);
+}
+
+
+/* Seam tuning: flatten the last part of the route section to the exact top colour of the panorama section. */
+body.page-uzbekistan .uz-routes {
+  background: linear-gradient(180deg, #123746 0%, #174a55 100%) !important;
+}
+body.page-uzbekistan .uz-nature {
+  background: #174a55 !important;
+}
+/* Keep the haze as an overlay above the masked image; the image itself fades in transparently. */
+body.page-uzbekistan .uz-nature::before {
+  content: none !important;
+  display: none !important;
+}
+body.page-uzbekistan .uz-nature-shade {
+  z-index: 1 !important;
+  background:
+    linear-gradient(to bottom,
+      #174a55 0%,
+      rgba(23,74,85,.94) 12%,
+      rgba(23,74,85,.78) 25%,
+      rgba(23,74,85,.48) 38%,
+      rgba(23,74,85,.20) 50%,
+      rgba(23,74,85,0) 62%),
+    linear-gradient(90deg,
+      rgba(0,0,0,.42) 0%,
+      rgba(0,0,0,.25) 31%,
+      rgba(0,0,0,.09) 51%,
+      rgba(0,0,0,0) 70%) !important;
+}
+
+
+/* ==============================================================
+   Polish pass: subdued green accents, shorter mountain fade,
+   text-glow navigation hover, and a frosted language dropdown.
+   ============================================================== */
+body.page-uzbekistan {
+  --uz-accent-green: #789b82;
+  --uz-accent-green-light: #91b09a;
+  --uz-accent-green-dim: #5f826a;
+}
+
+/* Keep the teal buttons/background as the base; accents become
+   quieter, greener, and intentionally different from the buttons. */
+body.page-uzbekistan .uz-hero .hero-eyebrow,
+body.page-uzbekistan .uz-hero h1 em,
+body.page-uzbekistan .uz-hero h1 .hero-title-line:last-child,
+body.page-uzbekistan .uz-hero .hero-categories .line-icon,
+body.page-uzbekistan .uz-hero .hero-categories i,
+body.page-uzbekistan .uz-routes .section-heading h2 em,
+body.page-uzbekistan .uz-routes .eyebrow,
+body.page-uzbekistan .uz-routes .format-icon,
+body.page-uzbekistan .uz-routes .format-arrow,
+body.page-uzbekistan .uz-nature .eyebrow,
+body.page-uzbekistan .uz-nature h2 em,
+body.page-uzbekistan .uz-request .quote-mark,
+body.page-uzbekistan .uz-request .note-compass {
+  color: var(--uz-accent-green-light) !important;
+}
+body.page-uzbekistan .uz-destinations .eyebrow,
+body.page-uzbekistan .uz-why .eyebrow,
+body.page-uzbekistan .uz-destinations .section-heading h2 em,
+body.page-uzbekistan .uz-why .section-heading h2 em,
+body.page-uzbekistan .uz-request .request-panel h2 em {
+  color: var(--uz-accent-green-dim) !important;
+}
+body.page-uzbekistan .site-header .nav-link:after {
+  background: var(--uz-accent-green) !important;
+}
+body.page-uzbekistan .site-header .nav-link.active {
+  color: var(--uz-accent-green-light) !important;
+}
+body.page-uzbekistan .site-header.scrolled .nav-link.active {
+  color: var(--uz-teal) !important;
+}
+
+/* Shorten the actual alpha mask by roughly 55% compared with the
+   previous implementation, while keeping the fade from the TOP. */
+body.page-uzbekistan .uz-nature-image {
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.025) 1.5%,
+    rgba(0,0,0,.09) 3.5%,
+    rgba(0,0,0,.24) 6%,
+    rgba(0,0,0,.45) 9%,
+    rgba(0,0,0,.69) 12%,
+    rgba(0,0,0,.88) 15%,
+    #000 18%) !important;
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.025) 1.5%,
+    rgba(0,0,0,.09) 3.5%,
+    rgba(0,0,0,.24) 6%,
+    rgba(0,0,0,.45) 9%,
+    rgba(0,0,0,.69) 12%,
+    rgba(0,0,0,.88) 15%,
+    #000 18%) !important;
+}
+/* Earlier overlay rules created a second large veil. Remove that
+   vertical veil so the image's own transparent top edge does the work. */
+body.page-uzbekistan .uz-nature-shade {
+  background: linear-gradient(90deg,
+    rgba(0,0,0,.42) 0%,
+    rgba(0,0,0,.25) 31%,
+    rgba(0,0,0,.09) 51%,
+    rgba(0,0,0,0) 70%) !important;
+}
+@media (max-width:760px) {
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.035) 2%,
+      rgba(0,0,0,.14) 4.5%,
+      rgba(0,0,0,.35) 8%,
+      rgba(0,0,0,.64) 12%,
+      rgba(0,0,0,.88) 15%,
+      #000 19%) !important;
+    mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.035) 2%,
+      rgba(0,0,0,.14) 4.5%,
+      rgba(0,0,0,.35) 8%,
+      rgba(0,0,0,.64) 12%,
+      rgba(0,0,0,.88) 15%,
+      #000 19%) !important;
+  }
+}
+
+/* Navigation: no sliding underline when merely hovering.
+   The active/current item retains its persistent underline. */
+body.page-uzbekistan .site-header .nav-link {
+  transition: color .22s ease, text-shadow .22s ease;
+}
+body.page-uzbekistan .site-header .nav-link:hover:not(.active)::after {
+  width: 0 !important;
+}
+body.page-uzbekistan .site-header .nav-link:hover:not(.active) {
+  color: var(--uz-accent-green-light) !important;
+  text-shadow: 0 0 8px rgba(120,155,130,.34), 0 0 16px rgba(120,155,130,.14);
+}
+body.page-uzbekistan .site-header.scrolled .nav-link:hover:not(.active) {
+  color: var(--uz-accent-green-dim) !important;
+  text-shadow: 0 0 8px rgba(95,130,106,.18);
+}
+/* Preserve the underline and subtle glow on the selected navigation item. */
+body.page-uzbekistan .site-header .nav-link.active::after {
+  width: 100% !important;
+}
+
+/* Language dropdown: translucent frosted glass with a soft entrance. */
+body.page-uzbekistan .language-menu {
+  display: grid !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(7px) scale(.985);
+  transform-origin: top right;
+  transition:
+    opacity .22s ease,
+    transform .26s cubic-bezier(.2,.7,.2,1),
+    visibility .22s ease;
+  background: rgba(238,232,218,.78) !important;
+  color: #153440 !important;
+  border: 1px solid rgba(255,255,255,.43) !important;
+  box-shadow: 0 14px 35px rgba(5,24,34,.14), inset 0 1px 0 rgba(255,255,255,.46);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  backdrop-filter: blur(16px) saturate(130%);
+  border-radius: 13px;
+  overflow: hidden;
+}
+body.page-uzbekistan .language.open .language-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+body.page-uzbekistan .language-menu button {
+  color: #153440;
+  background: transparent;
+  transition: background-color .18s ease, color .18s ease;
+}
+body.page-uzbekistan .language-menu button:hover,
+body.page-uzbekistan .language-menu button:focus-visible {
+  color: #244f45;
+  background: rgba(120,155,130,.16);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.page-uzbekistan .site-header .nav-link,
+  body.page-uzbekistan .language-menu,
+  body.page-uzbekistan .language-menu button {
+    transition: none !important;
+  }
+}
+
+
+/* ==============================================================
+   GLOBAL UI FINISH — shared across homepage and Uzbekistan page.
+   Navigation hover, press feedback, glass dropdowns and rounded
+   animated form selects. Also applies to About/Contacts sections.
+   ============================================================== */
+
+/* Navigation: hover glows the letters, never animates a new underline.
+   The active/current item retains its original underline. */
+.site-header .nav-link {
+  transition: color .22s ease, text-shadow .22s ease;
+}
+.site-header .nav-link:hover:not(.active)::after {
+  width: 0 !important;
+}
+.site-header .nav-link:hover:not(.active) {
+  color: #9fbda8 !important;
+  text-shadow: 0 0 8px rgba(122,158,132,.35), 0 0 17px rgba(122,158,132,.16);
+}
+.site-header.scrolled .nav-link:hover:not(.active) {
+  color: #587c64 !important;
+  text-shadow: 0 0 8px rgba(88,124,100,.22);
+}
+.site-header .nav-link.active::after {
+  width: 100% !important;
+}
+
+/* Language selector: a slightly grey, translucent glass surface. */
+.language-menu {
+  display: grid !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(7px) scale(.985);
+  transform-origin: top right;
+  transition: opacity .22s ease,
+              transform .26s cubic-bezier(.2,.7,.2,1),
+              visibility .22s ease;
+  background: rgba(190,199,198,.57) !important;
+  color: #183842 !important;
+  border: 1px solid rgba(255,255,255,.48) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(8,25,33,.17), inset 0 1px 0 rgba(255,255,255,.38);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+.language.open .language-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.language-menu button {
+  border-radius: 0 !important;
+  color: inherit;
+  padding: 10px 14px !important;
+  transition: background-color .18s ease, color .18s ease;
+}
+.language-menu button:hover,
+.language-menu button:focus-visible {
+  color: #456d53 !important;
+  background: rgba(112,151,122,.22) !important;
+}
+
+/* Animated rounded dropdowns for the booking form. The JS keeps a named
+   hidden input synchronised, so send.php/FormData still receive the same fields. */
+.custom-select-control {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  color: var(--text, #263247);
+  z-index: 3;
+}
+.custom-select-control.open { z-index: 20; }
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  position: relative;
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 42px 11px 14px;
+  border: 1px solid #d5d4cd;
+  border-radius: 13px;
+  background: rgba(255,255,255,.66);
+  color: inherit;
+  text-align: left;
+  line-height: 1.35;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease, transform .16s ease;
+}
+.custom-select-trigger::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .22s ease, color .18s ease;
+  opacity: .72;
+}
+.custom-select-control.open .custom-select-trigger::after {
+  transform: translateY(-25%) rotate(225deg);
+}
+.custom-select-trigger:hover,
+.custom-select-control.open .custom-select-trigger,
+.custom-select-trigger:focus-visible {
+  border-color: #799b82;
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 0 0 3px rgba(121,155,130,.13), inset 0 1px 0 rgba(255,255,255,.66);
+  outline: none;
+}
+.custom-select-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 7px);
+  display: grid;
+  gap: 3px;
+  max-height: min(250px, 42vh);
+  padding: 6px;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 15px;
+  background: rgba(218,224,218,.91);
+  color: #173b43;
+  box-shadow: 0 18px 40px rgba(8,32,42,.18), inset 0 1px 0 rgba(255,255,255,.62);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  backdrop-filter: blur(18px) saturate(130%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(9px) scale(.985);
+  transform-origin: top center;
+  transition: opacity .2s ease,
+              transform .24s cubic-bezier(.2,.7,.2,1),
+              visibility .2s ease;
+}
+.custom-select-control.open .custom-select-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.custom-select-option {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #173b43;
+  text-align: left;
+  line-height: 1.45;
+  cursor: pointer;
+  transition: color .16s ease, background-color .16s ease, transform .12s ease;
+}
+.custom-select-option:hover,
+.custom-select-option:focus-visible,
+.custom-select-option[aria-selected="true"] {
+  background: rgba(101,143,111,.19);
+  color: #355f43;
+  outline: none;
+}
+.custom-select-option:active { background: rgba(101,143,111,.29); }
+.custom-select-option:disabled { opacity: .5; cursor: default; }
+body.page-uzbekistan .custom-select-trigger {
+  background: rgba(252,250,245,.76);
+  border-color: #d4cbbb;
+  color: #153440;
+}
+body.page-uzbekistan .custom-select-trigger:hover,
+body.page-uzbekistan .custom-select-control.open .custom-select-trigger,
+body.page-uzbekistan .custom-select-trigger:focus-visible {
+  border-color: #789b82;
+  box-shadow: 0 0 0 3px rgba(120,155,130,.16), inset 0 1px 0 rgba(255,255,255,.6);
+}
+body.page-uzbekistan .custom-select-menu {
+  background: rgba(205,214,207,.91);
+  border-color: rgba(255,255,255,.66);
+  color: #153440;
+}
+body.page-uzbekistan .custom-select-option {
+  color: #153440;
+}
+body.page-uzbekistan .custom-select-option:hover,
+body.page-uzbekistan .custom-select-option:focus-visible,
+body.page-uzbekistan .custom-select-option[aria-selected="true"] {
+  background: rgba(104,145,111,.22);
+  color: #2e5a3f;
+}
+
+/* Interaction feedback for all links and buttons across the site. */
+a, button, .custom-select-trigger, .custom-select-option {
+  -webkit-tap-highlight-color: transparent;
+}
+a:active, button:active, .custom-select-trigger:active,
+.custom-select-option:active, [role="button"]:active {
+  transform: scale(.985);
+}
+.destination-card:active, .format-card:active { transform: scale(.994); }
+.site-header .nav-link:active { transform: scale(.98); }
+.modal-close { transition: color .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+.modal-close:hover, .modal-close:focus-visible {
+  color: #fff !important;
+  background: #b83c42 !important;
+  border-color: #b83c42 !important;
+  box-shadow: 0 0 0 4px rgba(184,60,66,.15), 0 4px 12px rgba(115,25,31,.2);
+}
+.modal-close:active {
+  color: #fff !important;
+  background: #922e34 !important;
+  border-color: #922e34 !important;
+  transform: scale(.91) !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.2);
+}
+
+/* Targeted refinements for Uzbekistan only: warm photo + contrasting hero title. */
+body.page-uzbekistan .uz-hero .hero-bg {
+  filter: sepia(.17) saturate(1.10) brightness(1.035) contrast(1.015) !important;
+}
+body.page-uzbekistan .uz-hero h1 em,
+body.page-uzbekistan .uz-hero h1 .hero-title-line:last-child {
+  color: #c28b61 !important; /* warm bronze, separate from the sage headings below */
+  text-shadow: 0 2px 22px rgba(0,0,0,.16);
+}
+body.page-uzbekistan .uz-hero .hero-eyebrow { color: #91b09a !important; }
+
+/* Bring mountain fade back to a medium-soft length: ~40% reduction from the
+   initial long fade, with full visibility by about 30% of the section height. */
+body.page-uzbekistan .uz-nature-image {
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.025) 2%,
+    rgba(0,0,0,.07) 5%,
+    rgba(0,0,0,.16) 9%,
+    rgba(0,0,0,.30) 14%,
+    rgba(0,0,0,.48) 19%,
+    rgba(0,0,0,.68) 24%,
+    rgba(0,0,0,.87) 28%,
+    #000 30%) !important;
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.025) 2%,
+    rgba(0,0,0,.07) 5%,
+    rgba(0,0,0,.16) 9%,
+    rgba(0,0,0,.30) 14%,
+    rgba(0,0,0,.48) 19%,
+    rgba(0,0,0,.68) 24%,
+    rgba(0,0,0,.87) 28%,
+    #000 30%) !important;
+}
+@media (max-width:760px) {
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.03) 2%,
+      rgba(0,0,0,.10) 5%,
+      rgba(0,0,0,.23) 10%,
+      rgba(0,0,0,.43) 16%,
+      rgba(0,0,0,.66) 22%,
+      rgba(0,0,0,.88) 28%,
+      #000 32%) !important;
+    mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.03) 2%,
+      rgba(0,0,0,.10) 5%,
+      rgba(0,0,0,.23) 10%,
+      rgba(0,0,0,.43) 16%,
+      rgba(0,0,0,.66) 22%,
+      rgba(0,0,0,.88) 28%,
+      #000 32%) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .nav-link, .language-menu, .language-menu button,
+  .custom-select-trigger, .custom-select-menu, .custom-select-option,
+  a, button, .modal-close { transition: none !important; }
+}
+
+
+/* Footer-link micro-hover and global press feedback, shared by all site sections. */
+.footer-links a,
+.footer-contact a,
+.footer-bottom a {
+  display: inline-block;
+  transform: scale(1);
+  transform-origin: left center;
+  transition: color .2s ease, transform .2s ease, filter .16s ease;
+}
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-bottom a:hover {
+  transform: scale(1.018);
+}
+a:active {
+  filter: brightness(.90);
+}
+button:active,
+.custom-select-trigger:active,
+.custom-select-option:active {
+  filter: brightness(.94);
+}
+
+
+/* LAST REQUESTED THEME SPLIT:
+   International tours keep their honey-gold accents; Uzbekistan uses
+   the warm bronze of its hero headline. Active item underline remains. */
+body:not(.page-uzbekistan) .site-header .nav-link:hover:not(.active) {
+  color: #d8a24f !important;
+  text-shadow: 0 0 8px rgba(216,162,79,.34), 0 0 17px rgba(216,162,79,.18) !important;
+}
+body:not(.page-uzbekistan) .site-header.scrolled .nav-link:hover:not(.active) {
+  color: #a9772b !important;
+  text-shadow: 0 0 8px rgba(169,119,43,.22) !important;
+}
+body:not(.page-uzbekistan) .site-header .nav-link.active {
+  color: #d8a24f !important;
+}
+body:not(.page-uzbekistan) .site-header .nav-link.active::after {
+  background: #d8a24f !important;
+  width: 100% !important;
+}
+body:not(.page-uzbekistan) .site-header.scrolled .nav-link.active {
+  color: #a9772b !important;
+}
+body:not(.page-uzbekistan) .site-header .nav-link:after {
+  background: #d8a24f !important;
+}
+
+/* Uzbekistan navigation uses the same bronze as the title in the hero;
+   not the sage-green accent used by secondary headings. */
+body.page-uzbekistan .site-header .nav-link:hover:not(.active) {
+  color: #c28b61 !important;
+  text-shadow: 0 0 8px rgba(194,139,97,.38), 0 0 17px rgba(194,139,97,.19) !important;
+}
+body.page-uzbekistan .site-header.scrolled .nav-link:hover:not(.active) {
+  color: #a66f4b !important;
+  text-shadow: 0 0 8px rgba(166,111,75,.22) !important;
+}
+body.page-uzbekistan .site-header .nav-link.active {
+  color: #c28b61 !important;
+}
+body.page-uzbekistan .site-header .nav-link.active::after {
+  background: #c28b61 !important;
+  width: 100% !important;
+}
+body.page-uzbekistan .site-header.scrolled .nav-link.active {
+  color: #a66f4b !important;
+}
+
+/* Request-modal dropdown surface: match the light modal panel, while
+   retaining sage-green focus/hover treatment on the selected option. */
+.custom-select-menu,
+body.page-uzbekistan .custom-select-menu {
+  background: rgba(255,253,249,.98) !important;
+  color: #173b43 !important;
+  border: 1px solid rgba(21,52,64,.12) !important;
+  box-shadow: 0 18px 42px rgba(8,32,42,.16), inset 0 1px 0 rgba(255,255,255,.9) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(108%);
+  backdrop-filter: blur(16px) saturate(108%);
+}
+.custom-select-option,
+body.page-uzbekistan .custom-select-option {
+  color: #173b43 !important;
+}
+.custom-select-option:hover,
+.custom-select-option:focus-visible,
+.custom-select-option[aria-selected="true"],
+body.page-uzbekistan .custom-select-option:hover,
+body.page-uzbekistan .custom-select-option:focus-visible,
+body.page-uzbekistan .custom-select-option[aria-selected="true"] {
+  background: rgba(104,145,111,.18) !important;
+  color: #2e5a3f !important;
+}
+
+/* The mountain photograph fades ONLY at the top 10%: fully clear at the
+   top edge, gradually less transparent downwards, then completely visible. */
+body.page-uzbekistan .uz-nature-image {
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.08) 1.5%,
+    rgba(0,0,0,.23) 3%,
+    rgba(0,0,0,.48) 5%,
+    rgba(0,0,0,.74) 7.5%,
+    rgba(0,0,0,.91) 9%,
+    #000 10%) !important;
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,0,0,.08) 1.5%,
+    rgba(0,0,0,.23) 3%,
+    rgba(0,0,0,.48) 5%,
+    rgba(0,0,0,.74) 7.5%,
+    rgba(0,0,0,.91) 9%,
+    #000 10%) !important;
+}
+@media (max-width:760px) {
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.08) 1.5%,
+      rgba(0,0,0,.25) 3.5%,
+      rgba(0,0,0,.52) 6%,
+      rgba(0,0,0,.8) 8.5%,
+      #000 10%) !important;
+    mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,.08) 1.5%,
+      rgba(0,0,0,.25) 3.5%,
+      rgba(0,0,0,.52) 6%,
+      rgba(0,0,0,.8) 8.5%,
+      #000 10%) !important;
+  }
+}
+
+
+/* Header on Uzbekistan page: match international tours' top-to-bottom dark fade.
+   The bronze/orange navigation accent is deliberately unchanged. */
+body.page-uzbekistan .site-header:not(.scrolled) {
+  background: transparent !important;
+}
+body.page-uzbekistan .site-header::before {
+  content: "";
+  display: block !important;
+  opacity: 1;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 205px;
+  background: linear-gradient(180deg,
+    rgba(20,26,27,.56) 0%,
+    rgba(20,26,27,.49) 12%,
+    rgba(20,26,27,.38) 28%,
+    rgba(20,26,27,.24) 46%,
+    rgba(20,26,27,.10) 67%,
+    rgba(20,26,27,.025) 84%,
+    rgba(20,26,27,0) 100%) !important;
+}
+body.page-uzbekistan .site-header.scrolled::before {
+  opacity: 0 !important;
+  display: none !important;
+}
+body.page-uzbekistan .site-header .header-inner { position:relative; z-index:1; }
+@media(max-width:760px) {
+  body.page-uzbekistan .site-header::before {
+    height: 185px;
+    background: linear-gradient(180deg,
+      rgba(20,26,27,.56) 0%,
+      rgba(20,26,27,.47) 16%,
+      rgba(20,26,27,.32) 34%,
+      rgba(20,26,27,.15) 56%,
+      rgba(20,26,27,.035) 82%,
+      rgba(20,26,27,0) 100%) !important;
+  }
+}
+
+/* Mountain image itself fades from transparent at the top to fully visible
+   over about 10 cm vertically. No additional vertical shade/veil is applied. */
+body.page-uzbekistan .uz-nature {
+  background: #174a55 !important;
+}
+body.page-uzbekistan .uz-nature-image {
+  -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0cm,
+    rgba(0,0,0,.015) .5cm,
+    rgba(0,0,0,.045) 1cm,
+    rgba(0,0,0,.10) 2cm,
+    rgba(0,0,0,.20) 3cm,
+    rgba(0,0,0,.34) 4cm,
+    rgba(0,0,0,.50) 5.3cm,
+    rgba(0,0,0,.68) 6.5cm,
+    rgba(0,0,0,.83) 7.8cm,
+    rgba(0,0,0,.94) 9cm,
+    #000 10cm,
+    #000 100%) !important;
+  mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0cm,
+    rgba(0,0,0,.015) .5cm,
+    rgba(0,0,0,.045) 1cm,
+    rgba(0,0,0,.10) 2cm,
+    rgba(0,0,0,.20) 3cm,
+    rgba(0,0,0,.34) 4cm,
+    rgba(0,0,0,.50) 5.3cm,
+    rgba(0,0,0,.68) 6.5cm,
+    rgba(0,0,0,.83) 7.8cm,
+    rgba(0,0,0,.94) 9cm,
+    #000 10cm,
+    #000 100%) !important;
+}
+body.page-uzbekistan .uz-nature-shade {
+  /* horizontal text legibility only; no vertical fade here */
+  background: linear-gradient(90deg,
+    rgba(0,0,0,.42) 0%,
+    rgba(0,0,0,.25) 31%,
+    rgba(0,0,0,.09) 51%,
+    rgba(0,0,0,0) 70%) !important;
+}
+@media(max-width:760px) {
+  /* 10 cm remains the requested fade length on mobile too, using the same stops. */
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom,
+      rgba(0,0,0,0) 0cm,
+      rgba(0,0,0,.025) .6cm,
+      rgba(0,0,0,.08) 1.5cm,
+      rgba(0,0,0,.18) 2.5cm,
+      rgba(0,0,0,.32) 3.8cm,
+      rgba(0,0,0,.50) 5.2cm,
+      rgba(0,0,0,.70) 6.7cm,
+      rgba(0,0,0,.88) 8.3cm,
+      rgba(0,0,0,.97) 9.4cm,
+      #000 10cm,
+      #000 100%) !important;
+    mask-image: linear-gradient(to bottom,
+      rgba(0,0,0,0) 0cm,
+      rgba(0,0,0,.025) .6cm,
+      rgba(0,0,0,.08) 1.5cm,
+      rgba(0,0,0,.18) 2.5cm,
+      rgba(0,0,0,.32) 3.8cm,
+      rgba(0,0,0,.50) 5.2cm,
+      rgba(0,0,0,.70) 6.7cm,
+      rgba(0,0,0,.88) 8.3cm,
+      rgba(0,0,0,.97) 9.4cm,
+      #000 10cm,
+      #000 100%) !important;
+  }
+}
+
+/* Show every destination/period option at once rather than scroll inside a dropdown.
+   The JS positions the list above the trigger when there is not enough room below. */
+.custom-select-menu {
+  max-height: none !important;
+  overflow: visible !important;
+}
+.custom-select-menu.opens-up {
+  top: auto !important;
+  bottom: calc(100% + 7px) !important;
+  transform: translateY(-7px) scale(.985);
+  transform-origin: bottom center;
+}
+.custom-select-control.open .custom-select-menu.opens-up {
+  transform: translateY(0) scale(1);
+}
+
+/* Uzbekistan header now mirrors the international page at every scroll position:
+   a transparent fixed header with the same soft top-to-bottom vignette. */
+body.page-uzbekistan .site-header,
+body.page-uzbekistan .site-header.scrolled {
+  position: fixed !important;
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+body.page-uzbekistan .site-header::before,
+body.page-uzbekistan .site-header.scrolled::before {
+  content: "" !important;
+  display: block !important;
+  opacity: 1 !important;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 205px;
+  background: linear-gradient(180deg,
+    rgba(35,38,41,.50) 0%,
+    rgba(35,38,41,.48) 6%,
+    rgba(35,38,41,.43) 13%,
+    rgba(35,38,41,.36) 21%,
+    rgba(35,38,41,.28) 30%,
+    rgba(35,38,41,.20) 40%,
+    rgba(35,38,41,.125) 51%,
+    rgba(35,38,41,.065) 61%,
+    rgba(35,38,41,.025) 71%,
+    rgba(35,38,41,0) 82%,
+    rgba(35,38,41,0) 100%) !important;
+}
+body.page-uzbekistan .site-header .header-inner,
+body.page-uzbekistan .site-header.scrolled .header-inner {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+body.page-uzbekistan .site-header .nav-link,
+body.page-uzbekistan .site-header.scrolled .nav-link,
+body.page-uzbekistan .site-header.scrolled .brand,
+body.page-uzbekistan .site-header.scrolled .language-current,
+body.page-uzbekistan .site-header.scrolled .burger {
+  color: rgba(255,255,255,.96) !important;
+  text-shadow: 0 1px 8px rgba(5,17,27,.32) !important;
+}
+body.page-uzbekistan .site-header .nav-link.active,
+body.page-uzbekistan .site-header.scrolled .nav-link.active,
+body.page-uzbekistan .site-header .nav-link:hover:not(.active),
+body.page-uzbekistan .site-header.scrolled .nav-link:hover:not(.active) {
+  color: #c28b61 !important;
+  text-shadow: 0 0 8px rgba(194,139,97,.36), 0 0 16px rgba(194,139,97,.16) !important;
+}
+body.page-uzbekistan .site-header .nav-link.active::after,
+body.page-uzbekistan .site-header.scrolled .nav-link.active::after,
+body.page-uzbekistan .site-header .nav-link:hover:not(.active)::after,
+body.page-uzbekistan .site-header.scrolled .nav-link:hover:not(.active)::after {
+  background: #c28b61 !important;
+}
+@media(max-width:760px) {
+  body.page-uzbekistan .site-header::before,
+  body.page-uzbekistan .site-header.scrolled::before {
+    height: 185px;
+    background: linear-gradient(180deg,
+      rgba(35,38,41,.50) 0%,
+      rgba(35,38,41,.46) 8%,
+      rgba(35,38,41,.39) 18%,
+      rgba(35,38,41,.29) 30%,
+      rgba(35,38,41,.19) 42%,
+      rgba(35,38,41,.105) 54%,
+      rgba(35,38,41,.045) 66%,
+      rgba(35,38,41,.01) 78%,
+      rgba(35,38,41,0) 100%) !important;
+  }
+}
+
+/* Scroll cue: preserve its horizontal centring on press; motion is only a small
+   vertical lift, and the whole cue responds with the site's bronze hover colour. */
+body.page-uzbekistan .uz-hero .scroll-cue {
+  transform: translateX(-50%);
+  transition: transform .24s cubic-bezier(.22,.7,.25,1),
+              color .22s ease, filter .22s ease;
+  will-change: transform;
+}
+body.page-uzbekistan .uz-hero .scroll-cue:hover,
+body.page-uzbekistan .uz-hero .scroll-cue:focus-visible {
+  color: #c28b61 !important;
+  filter: drop-shadow(0 0 6px rgba(194,139,97,.24));
+  outline: none;
+}
+body.page-uzbekistan .uz-hero .scroll-cue:hover .mouse,
+body.page-uzbekistan .uz-hero .scroll-cue:focus-visible .mouse {
+  border-color: #c28b61 !important;
+}
+body.page-uzbekistan .uz-hero .scroll-cue:hover .mouse i,
+body.page-uzbekistan .uz-hero .scroll-cue:focus-visible .mouse i {
+  background: #c28b61 !important;
+}
+body.page-uzbekistan .uz-hero .scroll-cue:active {
+  transform: translateX(-50%) translateY(-3px) !important;
+  filter: drop-shadow(0 0 7px rgba(194,139,97,.32));
+}
+body.page-uzbekistan .uz-hero .scroll-cue > svg {
+  animation: uzCueFloat 1.65s ease-in-out infinite !important;
+  transition: stroke .22s ease;
+}
+@keyframes uzCueFloat {
+  0%,100% { transform: translateY(0); opacity: .72; }
+  50% { transform: translateY(2px); opacity: 1; }
+}
+
+/* Mild top dissolve on the mountain photo: the image is still visible at the
+   top edge, then smoothly becomes fully opaque lower down. */
+body.page-uzbekistan .uz-nature {
+  background: #174a55 !important;
+}
+body.page-uzbekistan .uz-nature-image {
+  -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,.28) 0%,
+    rgba(0,0,0,.34) 3%,
+    rgba(0,0,0,.43) 6%,
+    rgba(0,0,0,.55) 9%,
+    rgba(0,0,0,.68) 12%,
+    rgba(0,0,0,.80) 15%,
+    rgba(0,0,0,.91) 18%,
+    rgba(0,0,0,.97) 21%,
+    #000 24%,
+    #000 100%) !important;
+  mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,.28) 0%,
+    rgba(0,0,0,.34) 3%,
+    rgba(0,0,0,.43) 6%,
+    rgba(0,0,0,.55) 9%,
+    rgba(0,0,0,.68) 12%,
+    rgba(0,0,0,.80) 15%,
+    rgba(0,0,0,.91) 18%,
+    rgba(0,0,0,.97) 21%,
+    #000 24%,
+    #000 100%) !important;
+}
+
+
+/* FINAL DETAIL PASS — remove the scrolled-header seam, clarify the mountain
+   top dissolve, and strengthen the booking dropdown and scroll cue. */
+body.page-uzbekistan .site-header,
+body.page-uzbekistan .site-header.scrolled {
+  border: 0 !important;
+  border-bottom: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Dropdown list in the "Подобрать тур" modal: use the site's sage-green accent. */
+.custom-select-menu,
+body.page-uzbekistan .custom-select-menu {
+  border: 1.5px solid #658f6f !important;
+  box-shadow: 0 18px 42px rgba(8,32,42,.16),
+              0 0 0 1px rgba(101,143,111,.08),
+              inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+/* The first 5% remains fully transparent; the next two 5% bands fade in
+   gently; after 20% the image is fully opaque. No second vertical haze layer. */
+body.page-uzbekistan .uz-nature {
+  background: #174a55 !important;
+}
+body.page-uzbekistan .uz-nature::before {
+  content: none !important;
+  display: none !important;
+}
+body.page-uzbekistan .uz-nature-image {
+  -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 5%,
+    rgba(0,0,0,.34) 10%,
+    rgba(0,0,0,.68) 15%,
+    #000 20%,
+    #000 100%) !important;
+  mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 5%,
+    rgba(0,0,0,.34) 10%,
+    rgba(0,0,0,.68) 15%,
+    #000 20%,
+    #000 100%) !important;
+}
+
+/* Make the scroll cue more legible without changing its position or sideways motion. */
+body.page-uzbekistan .uz-hero .scroll-cue {
+  color: rgba(255,250,241,.96) !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 6px rgba(4,18,24,.24);
+}
+body.page-uzbekistan .uz-hero .scroll-cue .mouse {
+  border-width: 1.7px !important;
+}
+body.page-uzbekistan .uz-hero .scroll-cue .mouse i {
+  width: 2.5px !important;
+  height: 6px !important;
+}
+body.page-uzbekistan .uz-hero .scroll-cue > svg {
+  width: 16px !important;
+  height: 16px !important;
+  stroke-width: 2.1 !important;
+}
+@media (max-width:760px) {
+  body.page-uzbekistan .uz-nature-image {
+    -webkit-mask-image: linear-gradient(to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 5%,
+      rgba(0,0,0,.34) 10%,
+      rgba(0,0,0,.68) 15%,
+      #000 20%,
+      #000 100%) !important;
+    mask-image: linear-gradient(to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 5%,
+      rgba(0,0,0,.34) 10%,
+      rgba(0,0,0,.68) 15%,
+      #000 20%,
+      #000 100%) !important;
+  }
+}
+
+
+/* Standalone About page — same cinematic hero, teal/sand palette and bronze nav accent. */
+body.page-about {
+  background: #f8f5ef;
+  --about-teal: #174a55;
+  --about-deep: #123b43;
+  --about-bronze: #c28b61;
+  --about-paper: #f8f5ef;
+}
+body.page-about .site-header,
+body.page-about .site-header.scrolled {
+  position: fixed !important;
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+body.page-about .site-header::before,
+body.page-about .site-header.scrolled::before {
+  content: "" !important;
+  display: block !important;
+  opacity: 1 !important;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 205px;
+  background: linear-gradient(180deg,
+    rgba(35,38,41,.50) 0%, rgba(35,38,41,.48) 6%,
+    rgba(35,38,41,.43) 13%, rgba(35,38,41,.36) 21%,
+    rgba(35,38,41,.28) 30%, rgba(35,38,41,.20) 40%,
+    rgba(35,38,41,.125) 51%, rgba(35,38,41,.065) 61%,
+    rgba(35,38,41,.025) 71%, rgba(35,38,41,0) 82%, rgba(35,38,41,0) 100%) !important;
+}
+body.page-about .site-header .header-inner,
+body.page-about .site-header.scrolled .header-inner { position: relative; z-index: 1; background: transparent !important; }
+body.page-about .site-header .nav-link,
+body.page-about .site-header.scrolled .nav-link,
+body.page-about .site-header.scrolled .brand,
+body.page-about .site-header.scrolled .language-current,
+body.page-about .site-header.scrolled .burger {
+  color: rgba(255,255,255,.96) !important;
+  text-shadow: 0 1px 8px rgba(5,17,27,.32) !important;
+}
+body.page-about .site-header .nav-link.active,
+body.page-about .site-header.scrolled .nav-link.active,
+body.page-about .site-header .nav-link:hover:not(.active),
+body.page-about .site-header.scrolled .nav-link:hover:not(.active) {
+  color: var(--about-bronze) !important;
+  text-shadow: 0 0 8px rgba(194,139,97,.36), 0 0 16px rgba(194,139,97,.16) !important;
+}
+body.page-about .site-header .nav-link.active::after,
+body.page-about .site-header.scrolled .nav-link.active::after,
+body.page-about .site-header .nav-link:hover:not(.active)::after,
+body.page-about .site-header.scrolled .nav-link:hover:not(.active)::after { background: var(--about-bronze) !important; }
+@media(max-width:760px) {
+  body.page-about .site-header::before,
+  body.page-about .site-header.scrolled::before {
+    height: 185px;
+    background: linear-gradient(180deg, rgba(35,38,41,.50) 0%, rgba(35,38,41,.46) 8%, rgba(35,38,41,.39) 18%, rgba(35,38,41,.29) 30%, rgba(35,38,41,.19) 42%, rgba(35,38,41,.105) 54%, rgba(35,38,41,.045) 66%, rgba(35,38,41,.01) 78%, rgba(35,38,41,0) 100%) !important;
+  }
+}
+
+body.page-about .about-hero {
+  height: 100vh; height: 100svh; height: 100dvh;
+  min-height: 650px; max-height: none; align-items: center;
+  background: #173f47; isolation: isolate;
+}
+body.page-about .about-hero .hero-bg {
+  background-image: url('../img/hero-user.webp') !important;
+  background-size: cover !important; background-position: center 54% !important;
+  transform: none !important; animation: none !important;
+}
+body.page-about .about-hero .hero-shade {
+  background: linear-gradient(90deg, rgba(6,25,35,.76) 0%, rgba(6,25,35,.57) 34%, rgba(6,25,35,.20) 72%, rgba(6,25,35,.12) 100%),
+              linear-gradient(180deg, rgba(5,23,32,.16) 0%, transparent 44%, rgba(5,23,32,.23) 100%) !important;
+}
+body.page-about .about-hero-content { padding-top: 88px; padding-bottom: 70px; }
+body.page-about .about-hero h1 { max-width: 850px; }
+body.page-about .about-hero h1 em { color: #c28b61 !important; }
+body.page-about .about-hero .hero-copy { max-width: 600px; }
+body.page-about .about-hero-actions { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
+body.page-about .about-hero .about-hero-button { min-width: 215px; }
+body.page-about .about-hero-link { display: inline-flex; align-items: center; gap: 11px; color: rgba(255,255,255,.91); font-size: 13px; border-bottom: 1px solid rgba(255,255,255,.38); padding: 10px 0; transition: color .22s ease, border-color .22s ease; }
+body.page-about .about-hero-link span { color: #c28b61; font-size: 17px; transition: transform .22s ease; }
+body.page-about .about-hero-link:hover { color: #e1b08a; border-color: #c28b61; }
+body.page-about .about-hero-link:hover span { transform: translate(2px,2px); }
+body.page-about .about-hero .scroll-cue { color: rgba(255,250,241,.94); text-shadow: 0 1px 6px rgba(4,18,24,.3); }
+body.page-about .about-hero .scroll-cue .mouse { border-width: 1.7px; }
+body.page-about .about-hero .scroll-cue .mouse i { width: 2.5px; height: 6px; }
+body.page-about .about-hero .scroll-cue > svg { width: 16px; height: 16px; stroke-width: 2.1; }
+body.page-about .about-hero .scroll-cue:hover,
+body.page-about .about-hero .scroll-cue:focus-visible { color: #c28b61; }
+body.page-about .about-hero .scroll-cue:hover .mouse,
+body.page-about .about-hero .scroll-cue:focus-visible .mouse { border-color: #c28b61; }
+body.page-about .about-hero .scroll-cue:hover .mouse i,
+body.page-about .about-hero .scroll-cue:focus-visible .mouse i { background: #c28b61; }
+
+body.page-about .about-story { background: #f8f5ef; color: #243742; padding-top: 110px; padding-bottom: 94px; }
+body.page-about .about-story-grid { display: grid; grid-template-columns: minmax(0,1.02fr) minmax(0,.98fr); align-items: center; gap: clamp(42px,6vw,88px); }
+body.page-about .about-story-copy .eyebrow,
+body.page-about .about-contact-heading .eyebrow { color: #8b9c77; }
+body.page-about .about-story-copy h2 { margin: 0 0 24px; color: #173f47; font: 500 clamp(42px,4.8vw,66px)/.98 Cormorant, Georgia, serif; letter-spacing: -.025em; }
+body.page-about .about-story-copy h2 em { font-style: normal; color: #c28b61; }
+body.page-about .about-story-copy > p:not(.eyebrow) { max-width: 650px; color: #667177; font-size: 15px; line-height: 1.8; margin: 0 0 15px; }
+body.page-about .about-story-copy .about-story-lead { color: #33484e !important; font-size: 17px !important; }
+body.page-about .about-story-signature { margin-top: 25px !important; padding-top: 19px; border-top: 1px solid rgba(23,63,71,.14); font-size: 14px !important; }
+body.page-about .about-story-signature span { color: #173f47; font-weight: 700; letter-spacing: .14em; font-size: 11px; }
+body.page-about .about-story-visual { min-height: 480px; height: clamp(470px,44vw,600px); position: relative; isolation: isolate; border-radius: 22px; overflow: hidden; background: #174a55; box-shadow: 0 24px 58px rgba(26,45,42,.16); }
+body.page-about .about-story-visual::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg,rgba(10,31,37,.02) 20%,rgba(10,31,37,.08) 45%,rgba(8,30,35,.74) 100%); pointer-events: none; }
+body.page-about .about-story-visual > img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+body.page-about .about-story-visual:hover > img { transform: scale(1.025); }
+body.page-about .about-story-stamp { position: absolute; z-index: 2; left: clamp(22px,3vw,36px); right: clamp(22px,3vw,36px); bottom: 48px; display: flex; align-items: center; gap: 16px; color: #fffdf8; font: 500 clamp(23px,2.5vw,34px)/1.04 Cormorant, Georgia, serif; }
+body.page-about .about-stamp-mark { display: grid; place-items: center; width: 50px; height: 50px; flex: 0 0 50px; border: 1px solid rgba(230,189,139,.8); border-radius: 50%; color: #e4ba8d; font-size: 27px; }
+body.page-about .about-story-stamp small { position: absolute; bottom: -27px; left: 66px; font: 9px Mont,Arial,sans-serif; letter-spacing: .18em; color: rgba(255,255,255,.72); }
+body.page-about .about-visual-caption { position: absolute; z-index: 2; top: 23px; left: 24px; right: 24px; color: #fff; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; text-shadow: 0 2px 12px rgba(0,0,0,.4); }
+body.page-about .about-values { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; margin-top: 54px; }
+body.page-about .about-value { display: flex; gap: 18px; align-items: flex-start; padding: 23px 23px 22px; border: 1px solid rgba(23,63,71,.12); border-radius: 15px; background: rgba(255,253,249,.68); transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease; }
+body.page-about .about-value:hover { transform: translateY(-3px); border-color: rgba(194,139,97,.6); box-shadow: 0 12px 28px rgba(38,57,50,.07); }
+body.page-about .about-value-number { color: #c28b61; font: 500 25px/1 Cormorant,Georgia,serif; padding-top: 1px; }
+body.page-about .about-value h3 { margin: 0 0 6px; color: #173f47; font: 500 22px/1.1 Cormorant,Georgia,serif; }
+body.page-about .about-value p { color: #727c7e; font-size: 12px; line-height: 1.65; margin: 0; }
+
+body.page-about .about-contact { background: #e9eee7; padding-top: 100px; padding-bottom: 108px; }
+body.page-about .about-contact-heading { margin-bottom: 42px; }
+body.page-about .about-contact-heading h2 { color: #173f47; }
+body.page-about .about-contact-heading h2 em { color: #c28b61; }
+body.page-about .about-contact-heading .section-lead { margin-inline: auto; }
+body.page-about .about-contact-grid { display: grid; grid-template-columns: minmax(300px,.78fr) minmax(0,1.22fr); gap: 22px; align-items: stretch; }
+body.page-about .about-contact-card { min-width: 0; position: relative; overflow: hidden; display: flex; flex-direction: column; padding: clamp(27px,3.5vw,45px); border-radius: 22px; color: #f8f5ef; background: linear-gradient(145deg,#1c5660 0%,#143e47 75%,#123740 100%); box-shadow: 0 22px 55px rgba(23,63,71,.18); font-style: normal; }
+body.page-about .about-contact-card::after { content: ""; position: absolute; width: 230px; height: 230px; right: -90px; top: -95px; border: 1px solid rgba(222,177,128,.18); border-radius: 50%; box-shadow: 0 0 0 25px rgba(222,177,128,.035),0 0 0 50px rgba(222,177,128,.025); pointer-events: none; }
+body.page-about .about-contact-kicker { position: relative; z-index: 1; margin: 0 0 20px; color: #d5af8b; font-size: 9px; letter-spacing: .19em; }
+body.page-about .about-contact-icon { display: grid; place-items: center; width: 45px; height: 45px; margin-bottom: 14px; border: 1px solid rgba(223,185,146,.65); border-radius: 50%; color: #dfb992; }
+body.page-about .about-contact-icon svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+body.page-about .about-contact-card h3 { position: relative; z-index: 1; margin: 0; color: #fffaf2; font: 500 clamp(28px,3vw,38px)/1.02 Cormorant,Georgia,serif; }
+body.page-about .about-contact-city { margin: 8px 0 0; color: rgba(248,245,239,.73); font-size: 13px; }
+body.page-about .about-contact-landmark { display: flex; flex-direction: column; gap: 2px; margin-top: 20px; }
+body.page-about .about-contact-landmark span, body.page-about .about-contact-hours small, body.page-about .about-contact-phones small { color: #b8c9c6; font-size: 10px; letter-spacing: .04em; }
+body.page-about .about-contact-landmark strong { color: #fff5e7; font-weight: 500; font-size: 13px; }
+body.page-about .about-contact-divider { height: 1px; margin: 23px 0 20px; background: rgba(255,255,255,.14); }
+body.page-about .about-contact-hours { display: flex; align-items: flex-start; gap: 12px; }
+body.page-about .contact-line-icon { color: #dfb992; font-size: 23px; line-height: 1; }
+body.page-about .about-contact-hours div { display: flex; flex-direction: column; gap: 3px; }
+body.page-about .about-contact-hours strong { color: #fffaf2; font-size: 13px; font-weight: 500; }
+body.page-about .about-contact-phones { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-top: 22px; }
+body.page-about .about-contact-phones small { margin-bottom: 2px; }
+body.page-about .about-contact-phones a { color: #fffaf2; font-size: 13px; letter-spacing: .02em; transition: color .2s ease; }
+body.page-about .about-contact-phones a:hover { color: #e4b88e; }
+body.page-about .about-contact-socials { display: flex; gap: 18px; margin-top: 21px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.14); }
+body.page-about .about-contact-socials a { color: #e4b88e; font-size: 12px; transition: color .2s ease; }
+body.page-about .about-contact-socials a:hover { color: #fff6eb; }
+body.page-about .about-map-open { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 27px; padding: 13px 15px; border: 1px solid rgba(223,185,146,.68); border-radius: 10px; color: #fff5e7; font-size: 12px; transition: color .2s ease, background .2s ease, border-color .2s ease; }
+body.page-about .about-map-open span { color: #e4b88e; font-size: 18px; }
+body.page-about .about-map-open:hover { color: #173f47; background: #e4b88e; border-color: #e4b88e; }
+body.page-about .about-map-open:hover span { color: #173f47; }
+body.page-about .about-map-frame { position: relative; min-height: 600px; border: 7px solid rgba(255,253,249,.78); border-radius: 22px; overflow: hidden; background: #d8e2df; box-shadow: 0 22px 55px rgba(23,63,71,.14); }
+body.page-about .about-map-frame iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; }
+body.page-about .about-map-label { position: absolute; z-index: 2; left: 20px; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; padding: 14px 17px; border: 1px solid rgba(23,63,71,.08); border-radius: 12px; color: #173f47; background: rgba(255,253,249,.95); box-shadow: 0 8px 24px rgba(11,35,38,.12); pointer-events: none; }
+body.page-about .about-map-dot { width: 10px; height: 10px; flex: 0 0 10px; border-radius: 50%; background: #c28b61; box-shadow: 0 0 0 5px rgba(194,139,97,.15); }
+body.page-about .about-map-label span:last-child { display: flex; flex-direction: column; gap: 1px; }
+body.page-about .about-map-label strong { font-size: 12px; font-weight: 700; }
+body.page-about .about-map-label small { color: #737c7e; font-size: 10px; }
+body.page-about .footer-links { flex-wrap: wrap; }
+
+@media(max-width:1000px) {
+  body.page-about .about-story-grid { gap: 36px; grid-template-columns: minmax(0,1fr) minmax(0,.9fr); }
+  body.page-about .about-story-visual { height: 480px; min-height: 440px; }
+  body.page-about .about-values { gap: 10px; }
+  body.page-about .about-value { padding: 19px 16px; gap: 12px; }
+  body.page-about .about-contact-grid { grid-template-columns: minmax(270px,.85fr) minmax(0,1.15fr); gap: 16px; }
+  body.page-about .about-map-frame { min-height: 570px; }
+}
+@media(max-width:760px) {
+  body.page-about .about-hero { min-height: 0; }
+  body.page-about .about-hero .hero-bg { background-position: 62% center !important; }
+  body.page-about .about-hero .hero-shade { background: linear-gradient(90deg,rgba(5,24,42,.70),rgba(5,24,42,.30)),linear-gradient(0deg,rgba(5,24,42,.46),transparent 82%) !important; }
+  body.page-about .about-hero-content { padding-top: 105px; padding-bottom: 20px; }
+  body.page-about .about-hero-actions { gap: 10px 18px; align-items: flex-start; flex-direction: column; }
+  body.page-about .about-hero .about-hero-button { min-width: 0; }
+  body.page-about .about-hero-link { font-size: 12px; padding: 6px 0; }
+  body.page-about .about-story { padding-top: 72px; padding-bottom: 70px; }
+  body.page-about .about-story-grid { grid-template-columns: 1fr; gap: 30px; }
+  body.page-about .about-story-copy h2 { font-size: clamp(39px,10vw,54px); }
+  body.page-about .about-story-copy > p:not(.eyebrow) { font-size: 14px; }
+  body.page-about .about-story-copy .about-story-lead { font-size: 15px !important; }
+  body.page-about .about-story-visual { height: 430px; min-height: 0; }
+  body.page-about .about-story-stamp { bottom: 43px; }
+  body.page-about .about-values { grid-template-columns: 1fr; margin-top: 30px; gap: 10px; }
+  body.page-about .about-value { padding: 18px 19px; }
+  body.page-about .about-contact { padding-top: 70px; padding-bottom: 74px; }
+  body.page-about .about-contact-heading { margin-bottom: 30px; }
+  body.page-about .about-contact-grid { grid-template-columns: 1fr; gap: 14px; }
+  body.page-about .about-contact-card { padding: 28px 24px; }
+  body.page-about .about-map-frame { min-height: 420px; height: 62vh; border-width: 5px; border-radius: 18px; }
+  body.page-about .about-map-label { left: 12px; right: 12px; bottom: 12px; padding: 12px 14px; }
+}
+@media(max-width:430px) {
+  body.page-about .about-story-visual { height: 360px; }
+  body.page-about .about-story-stamp { left: 18px; right: 18px; font-size: 26px; gap: 12px; }
+  body.page-about .about-stamp-mark { width: 43px; height: 43px; flex-basis: 43px; }
+  body.page-about .about-story-stamp small { left: 55px; font-size: 8px; }
+  body.page-about .about-visual-caption { left: 18px; top: 18px; font-size: 9px; line-height: 1.5; }
+  body.page-about .about-map-frame { min-height: 380px; height: 58vh; }
+}
+@media(prefers-reduced-motion:reduce) {
+  body.page-about .about-story-visual > img,
+  body.page-about .about-value,
+  body.page-about .about-hero-link,
+  body.page-about .about-contact-card a { transition: none !important; }
+}
+
+/* Final responsive refinements for the standalone About page. */
+body.page-about .footer-main { grid-template-columns: minmax(0,1.05fr) minmax(0,1fr) minmax(0,1fr); }
+@media(max-width:1100px) {
+  body.page-about .footer-main { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:760px) {
+  body.page-about .nav.open {
+    background: rgba(9,35,42,.97) !important;
+    color: rgba(255,255,255,.96) !important;
+    border-bottom: 1px solid rgba(194,139,97,.24);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+  body.page-about .footer-main { grid-template-columns: 1fr 1fr; }
+  body.page-about .footer-brand { grid-column: 1/-1; }
+}
+
+/* About page: leadership and opening hours */
+body.page-about .about-leadership { background: #e9eee7; padding-top: 88px; padding-bottom: 96px; }
+body.page-about .about-leader-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; max-width: 1000px; margin: 0 auto; }
+body.page-about .about-leader-card, body.page-about .about-hours-card { display: flex; align-items: flex-start; gap: 22px; padding: clamp(25px,3vw,38px); border: 1px solid rgba(23,63,71,.11); border-radius: 19px; background: rgba(255,253,249,.78); box-shadow: 0 15px 38px rgba(23,63,71,.06); }
+body.page-about .about-leader-symbol { display: grid; place-items: center; width: 58px; height: 58px; flex: 0 0 58px; border: 1px solid rgba(194,139,97,.65); border-radius: 50%; color: #c28b61; font: 500 19px Cormorant,Georgia,serif; letter-spacing: .04em; }
+body.page-about .about-leader-label { margin: 0 0 10px; color: #82917e; font-size: 9px; letter-spacing: .16em; line-height: 1.5; }
+body.page-about .about-leader-card h3, body.page-about .about-hours-card h3 { margin: 0 0 11px; color: #173f47; font: 500 clamp(24px,2.5vw,31px)/1.08 Cormorant,Georgia,serif; }
+body.page-about .about-leader-card p:last-child, body.page-about .about-hours-card p:not(.about-leader-label) { margin: 0; color: #6e7a7b; font-size: 12px; line-height: 1.8; }
+body.page-about .about-hours-icon { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 48px; border-radius: 50%; color: #c28b61; background: rgba(194,139,97,.12); font-size: 29px; }
+body.page-about .about-hours-card a { display: inline-flex; gap: 9px; align-items: center; margin-top: 16px; color: #173f47; font-size: 12px; border-bottom: 1px solid rgba(194,139,97,.65); padding-bottom: 4px; transition: color .2s ease; }
+body.page-about .about-hours-card a:hover { color: #b6784d; }
+body.page-contacts .contacts-hero .hero-bg { background-position: center 46%; }
+body.page-contacts .contacts-hero .hero-shade { background: linear-gradient(90deg,rgba(5,24,42,.68),rgba(5,24,42,.24)),linear-gradient(0deg,rgba(5,24,42,.40),transparent 82%) !important; }
+body.page-contacts .contacts-hero .hero-title-line { display: block; }
+body.page-contacts .contacts-hero h1 em { color: #c28b61 !important; }
+body.page-contacts .about-contact { scroll-margin-top: 80px; }
+@media (max-width: 760px) {
+  body.page-about .about-leadership { padding-top: 68px; padding-bottom: 72px; }
+  body.page-about .about-leader-grid { grid-template-columns: 1fr; gap: 12px; }
+  body.page-about .about-leader-card, body.page-about .about-hours-card { padding: 23px 20px; gap: 16px; }
+  body.page-about .about-leader-symbol { width: 48px; height: 48px; flex-basis: 48px; }
+  body.page-contacts .about-contact { padding-top: 70px; padding-bottom: 74px; }
+}
+
+/* Final photo and motion pass — Dream Compass */
+body.page-about .about-hero { height: 66vh; height: 66svh; min-height: 500px; max-height: 650px; }
+body.page-about .about-hero .hero-bg { background-image: url('../img/banner-about-bukhara-registan.webp') !important; background-position: center 57% !important; }
+body.page-contacts .contacts-hero { height: 62vh; height: 62svh; min-height: 430px; max-height: 600px; }
+body.page-contacts .contacts-hero .hero-bg { background-image: url('../img/banner-contacts-tashkent.webp') !important; background-position: center 54% !important; }
+body.page-about .about-story-visual > img { object-position: center 35%; }
+/* Same small, smooth vertical cue motion on the international tours page as on Uzbekistan. */
+body:not(.page-uzbekistan):not(.page-about) .hero .scroll-cue { transform: translateX(-50%); transition: transform .24s cubic-bezier(.22,.7,.25,1), color .22s ease, filter .22s ease; will-change: transform; }
+body:not(.page-uzbekistan):not(.page-about) .hero .scroll-cue:hover,
+body:not(.page-uzbekistan):not(.page-about) .hero .scroll-cue:focus-visible { color:#c28b61; filter:drop-shadow(0 0 6px rgba(194,139,97,.24)); outline:none; }
+body:not(.page-uzbekistan):not(.page-about) .hero .scroll-cue:hover .mouse { border-color:#c28b61; }
+body:not(.page-uzbekistan):not(.page-about) .hero .scroll-cue:hover .mouse i { background:#c28b61; }
+body:not(.page-uzbekistan):not(.page-about) .hero .scroll-cue:active { transform:translateX(-50%) translateY(-3px); }
+body:not(.page-uzbekistan):not(.page-about) .hero .scroll-cue > svg { animation:uzCueFloat 1.65s ease-in-out infinite; transition:stroke .22s ease; }
+@media (max-width:760px) {
+ body.page-about .about-hero { height:auto; min-height:0; max-height:none; }
+ body.page-about .about-hero-content { padding-top:120px; padding-bottom:58px; }
+ body.page-contacts .contacts-hero { height:auto; min-height:0; max-height:none; }
+ body.page-contacts .contacts-hero-content { padding-top:120px; padding-bottom:58px; }
+}
+
+
+/* Shared, non-jumping detail modal for destinations and travel ideas. */
+#detailModal.detail-modal {
+  position: fixed; inset: 0; margin: auto;
+  width: min(1000px, calc(100% - 30px)); max-width: 1000px;
+  max-height: min(90vh, 900px); padding: 0; overflow: auto;
+  border-radius: 22px; background: var(--paper); color: var(--text);
+}
+#detailModal.detail-modal .modal-close {
+  position: absolute; top: 14px; right: 14px; float: none; margin: 0;
+  background: rgba(255,253,249,.96); color: var(--navy); border-color: var(--line);
+}
+#detailModal .detail-modal-content {
+  display: grid; grid-template-columns: minmax(250px,.86fr) minmax(0,1.14fr); align-items: stretch;
+}
+#detailModal .detail-modal-image { min-height: 570px; background: #18364e; overflow: hidden; }
+#detailModal .detail-modal-image img { display:block; width:100%; height:100%; min-height:570px; object-fit:cover; object-position:center; }
+#detailModal .detail-modal-copy { min-width:0; padding: 42px clamp(22px,3vw,40px) 34px; }
+#detailModal .detail-modal-copy .eyebrow { padding-right:38px; }
+#detailModal .detail-modal-content h2 { font-size:clamp(34px,4vw,48px); line-height:1; margin-bottom:14px; }
+#detailModal .detail-modal-copy>p:not(.eyebrow) { color:var(--muted); line-height:1.7; }
+#detailModal .detail-facts { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 20px; }
+#detailModal .detail-facts span { display:inline-flex; align-items:center; border:1px solid rgba(201,135,61,.35); color:#8b5b25; background:#fff8ed; border-radius:99px; padding:6px 10px; font-size:11px; line-height:1.4; }
+#detailModal .detail-highlights h3,#detailModal .detail-program h3 { margin:22px 0 10px; color:var(--gold); font-size:11px; letter-spacing:.15em; text-transform:uppercase; }
+#detailModal .detail-highlight-list { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+#detailModal .detail-highlight-list li { position:relative; padding-left:18px; color:var(--text); font-size:12px; line-height:1.65; }
+#detailModal .detail-highlight-list li::before { content:""; position:absolute; left:0; top:.68em; width:6px; height:6px; background:var(--gold); border-radius:50%; }
+#detailModal .detail-program { margin-top:18px; }
+#detailModal .program-item { display:grid; gap:4px; padding:11px 0; border-top:1px solid var(--line); }
+#detailModal .program-item b { color:var(--navy); font-size:12px; font-weight:700; }
+#detailModal .program-item span { color:var(--muted); font-size:12px; line-height:1.65; }
+#detailModal .detail-note { margin:18px 0 0; padding:12px 14px; background:rgba(20,35,62,.045); border-radius:10px; color:var(--muted); font-size:11px; line-height:1.6; }
+#detailModal .detail-actions { margin-top:20px; }
+body.page-uzbekistan #detailModal .detail-modal-copy .eyebrow,
+body.page-uzbekistan #detailModal .detail-highlights h3,
+body.page-uzbekistan #detailModal .detail-program h3 { color:#176b70; }
+body.page-uzbekistan #detailModal .detail-facts span { border-color:rgba(23,107,112,.3); color:#176b70; background:rgba(23,107,112,.07); }
+body.page-uzbekistan #detailModal .detail-highlight-list li::before { background:#176b70; }
+body.page-uzbekistan #detailModal .detail-actions .button { background:#176b70; }
+body.page-uzbekistan #detailModal .text-button { color:#176b70; }
+@media(max-width:760px) {
+  #detailModal.detail-modal { width:calc(100% - 20px); max-height:91vh; border-radius:17px; }
+  #detailModal .detail-modal-content { grid-template-columns:1fr; }
+  #detailModal .detail-modal-image { min-height:200px; height:200px; }
+  #detailModal .detail-modal-image img { min-height:200px; height:200px; }
+  #detailModal .detail-modal-copy { padding:25px 21px 24px; }
+  #detailModal .detail-modal-content h2 { font-size:clamp(31px,8vw,42px); }
+  #detailModal .detail-actions { gap:10px; }
+}
+
+
+/* Improve translated heading readability: leave a small, consistent gap between title lines in Russian and Uzbek. */
+html[lang="ru"] h1,
+html[lang="ru"] h2,
+html[lang="ru"] h3,
+html[lang="uz"] h1,
+html[lang="uz"] h2,
+html[lang="uz"] h3 {
+  line-height: calc(1em + 5px) !important;
+}
+
+/* The Uzbek international-tour hero uses the requested word order and may wrap naturally on narrow screens. */
+.hero h1 .hero-uz-first-line,
+.hero h1 .hero-uz-brand-line {
+  white-space: normal !important;
+  width: auto !important;
+  max-width: 100% !important;
+  overflow-wrap: normal;
+}
+.hero h1 .hero-uz-brand-line em {
+  color: #e9bd7a;
+  font-style: normal;
+}
+
+/* Section 6 request form: use the same restrained typography as the request modal.
+   This keeps long Uzbek and English labels from feeling heavy or crowding controls. */
+.request-section .request-panel .request-form .field > span,
+.request-section .request-panel .request-form .choice-field legend {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+.request-section .request-panel .request-form .field > span small {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.45 !important;
+}
+.request-section .request-panel .request-form .choice-row span {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+.request-section .request-panel .request-form input:not([type="radio"]),
+.request-section .request-panel .request-form select,
+.request-section .request-panel .request-form textarea,
+.request-section .request-panel .request-form .custom-select-trigger {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+.request-section .request-panel .request-form input::placeholder,
+.request-section .request-panel .request-form textarea::placeholder {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+.request-section .request-panel .request-form .custom-select-option {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+
+
+/* Final mobile-only polish requested: fullscreen centered menu, balanced Cruise tile,
+   compact request form, centered footer mark and aligned name/phone inputs. */
+@media (max-width: 760px) {
+  /* Full-screen navigation overlay. The close (burger) control remains above it. */
+  .site-header .nav,
+  .site-header .nav.open {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 26px 24px !important;
+    box-sizing: border-box !important;
+    display: none;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: clamp(18px, 3.5vh, 28px) !important;
+    text-align: center !important;
+    overflow-y: auto;
+    background: rgba(12, 36, 47, .985) !important;
+    color: #fffdf8 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    z-index: 45 !important;
+  }
+  .site-header .nav.open { display: flex !important; }
+  .site-header .nav .nav-link {
+    display: block;
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    padding: 7px 0 10px;
+    margin: 0 auto;
+    text-align: center !important;
+    color: rgba(255,255,255,.96) !important;
+    font-size: clamp(22px, 6vw, 29px) !important;
+    line-height: 1.2;
+  }
+  .site-header .nav .nav-link::after {
+    left: 50% !important;
+    bottom: 0 !important;
+    transform: translateX(-50%);
+  }
+  .site-header .nav .nav-link.active::after,
+  .site-header .nav .nav-link:hover::after { width: 54% !important; }
+  .site-header .burger {
+    position: relative;
+    z-index: auto;
+    color: inherit;
+  }
+  body.menu-open .site-header .burger {
+    position: fixed !important;
+    z-index: 55 !important;
+    top: max(10px, env(safe-area-inset-top)) !important;
+    right: max(12px, env(safe-area-inset-right)) !important;
+    color: #fff !important;
+    border-radius: 50%;
+    background: rgba(255,255,255,.09);
+    padding: 12px !important;
+  }
+  .site-header .burger span { width: 23px; height: 2px; }
+  body.menu-open .site-header { z-index: 50; }
+
+  /* On the international hero, the Cruise tile occupies and centres the full last row. */
+  body:not(.page-uzbekistan) .hero-categories a:nth-child(5) {
+    grid-column: 1 / -1 !important;
+    justify-self: stretch !important;
+    width: 100% !important;
+    max-width: none !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  /* Keep only the request/form column in section six on mobile. */
+  .request-section .request-visual { display: none !important; }
+  .request-section .request-wrap { grid-template-columns: minmax(0, 1fr) !important; }
+  .request-section .request-panel { width: 100%; min-width: 0; }
+
+  /* Centred footer logo on every page. */
+  .footer-main .footer-brand {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    align-self: center !important;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto !important;
+    transform: translateX(-20px) !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer-main .footer-brand > span { align-items: center; text-align: center; }
+
+  /* The phone label may wrap to two lines in UZ/EN. Reserve the same label height
+     for both fields so the input boxes start on exactly the same baseline. */
+  .request-section .request-form .field-name > span,
+  .request-section .request-form .field-phone > span {
+    display: flex !important;
+    align-items: flex-end !important;
+    min-height: 2.9em !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* Final footer alignment: balanced three-column desktop layout and centered mobile stack. */
+.footer-main,
+body.page-about .footer-main {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: start !important;
+  justify-items: center !important;
+  text-align: center !important;
+  column-gap: clamp(18px, 3vw, 42px) !important;
+  row-gap: 28px !important;
+}
+.footer-main > .footer-brand,
+body.page-about .footer-main > .footer-brand {
+  grid-column: auto !important;
+  justify-self: center !important;
+  align-self: start !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  transform: none !important;
+  text-align: center !important;
+}
+.footer-main > .footer-brand > span,
+body.page-about .footer-main > .footer-brand > span {
+  align-items: center !important;
+  text-align: center !important;
+}
+.footer-main > .footer-links,
+.footer-main > .footer-contact,
+body.page-about .footer-main > .footer-links,
+body.page-about .footer-main > .footer-contact {
+  width: 100% !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
+}
+.footer-main > .footer-links a,
+.footer-main > .footer-contact a,
+.footer-main > .footer-contact strong,
+body.page-about .footer-main > .footer-links a,
+body.page-about .footer-main > .footer-contact a,
+body.page-about .footer-main > .footer-contact strong {
+  text-align: center !important;
+}
+.footer-bottom,
+body.page-about .footer-bottom {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 12px 24px !important;
+}
+@media (max-width: 760px) {
+  .footer-main,
+  body.page-about .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    justify-items: center !important;
+    align-items: start !important;
+    column-gap: 18px !important;
+    row-gap: 26px !important;
+    text-align: center !important;
+  }
+  .footer-main > .footer-brand,
+  body.page-about .footer-main > .footer-brand {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    justify-self: center !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    justify-content: center !important;
+  }
+  .footer-main > .footer-links,
+  .footer-main > .footer-contact,
+  body.page-about .footer-main > .footer-links,
+  body.page-about .footer-main > .footer-contact {
+    grid-column: auto !important;
+    width: 100% !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer-bottom,
+  body.page-about .footer-bottom {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+}
+@media (max-width: 380px) {
+  .footer-main,
+  body.page-about .footer-main {
+    column-gap: 10px !important;
+  }
+  .footer-main > .footer-links,
+  .footer-main > .footer-contact,
+  body.page-about .footer-main > .footer-links,
+  body.page-about .footer-main > .footer-contact {
+    font-size: 11px !important;
+  }
+}
+
+/* Desktop footer: vertically center the brand mark with the two information columns. */
+@media (min-width: 761px) {
+  .footer-main,
+  body.page-about .footer-main {
+    align-items: center !important;
+  }
+  .footer-main > .footer-brand,
+  body.page-about .footer-main > .footer-brand {
+    align-self: center !important;
+  }
+}
+
+/* Hero spacing fix: keep the introductory copy clear of the transparent header. */
+body.page-about .about-hero,
+body.page-contacts .contacts-hero {
+  height: auto !important;
+  min-height: 620px !important;
+  max-height: none !important;
+  align-items: flex-start !important;
+}
+body.page-about .about-hero-content,
+body.page-contacts .contacts-hero .about-hero-content {
+  padding-top: clamp(148px, 13vh, 168px) !important;
+  padding-bottom: 50px !important;
+}
+@media (max-width: 760px) {
+  body.page-about .about-hero,
+  body.page-contacts .contacts-hero {
+    min-height: 0 !important;
+  }
+  body.page-about .about-hero-content,
+  body.page-contacts .contacts-hero .about-hero-content {
+    padding-top: 126px !important;
+    padding-bottom: 42px !important;
+  }
+}
